@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tribute page</title>
+    <link rel="stylesheet" href="./styles.Css"></link>
+</head>
+<body>
+    <h1 id="title">Google's Survey Form</h1>
+        <p id="description">Thank you for taking the time to help me improve </p>
+               <form id="survey-form">
+           <fieldset>
+            <legend>form</legend>
+           <label for="name">Name<input id="name" type="text" placeholder="Enter your name" required/></label>
+                                                               <label for="email">Email<input id="email" type="email" placeholder="Enter your email" required></label>
+                                                       <label for="number">Age(optional)<input id="number" type="number" min="10" max="120" placeholder="Age"></label>
+       
+                                                               </fieldset>
+                                                   <fieldset>
+        <label id="name-label"><input placeholder="Enter your name"required ></input>enter your name</label> 
+        <label id="email-label"><input placeholder="Enter your email"required></input>enter your email</label> 
+        <label id="number-label"><input type="number"placeholder="Enter your number"required></input>enter your number</label> 
+                               <label for="dropdown">How did you hear about me?
+           <select id="dropdown" name="dropdown">
+            <option value="">(select one)</option>
+           <option value="1">  Official Account</option>
+            <option value="2">From Friends </option>
+            <option value="3">Media</option>
+             <option value="4">Other</option>                                                 
+            </select>
+             </label>
+       <label for="recommend">Would you recommend my work to a friend?</label>
+        <label class="radio-label" for="Definitely">
+        <input id="Definitely"value="definitely" name="recommend-option" type="radio">Definitely</input>
+        </label>
+         <label class="radio-label" for="Maybe">
+         <input id="Maybe"value="maybe" name="recommend-option" type="radio">Maybe</input>       
+         </label>                                           <label class="radio-label" for="No">
+         <input id="No"value="no" name="recommend-option" type="radio"no></input></label>                                          <label>Which platform do you prefer to use?</label>
+        <label class="checkbox-label" for="prefer-answer">                                 <input value="1" id="Wechat Official Account" type="checkbox">wechat official account</input>
+        </label>
+       <label class="checkbox-label" for="prefer-answer">
+           <input value="2" id="Telegram Channel" type="checkbox">Telegram channel</input>
+           </label> 
+            <label class="checkbox-label" for="prefer-answer">
+         <input value="3" id="Matters" type="checkbox">Matters</input></label>
+            <label for="comment">Any comments or suggestions?
+           <textarea id="comment" name="comment" rows="3" cols="30" placeholder="o(=•ェ•=)m"></textarea>
+           </label>
+            </fieldset>
+           <input class="submit" id="submit" type="submit" value="Submit" />
+           </form>
+</body>
+</html>

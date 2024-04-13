@@ -1,0 +1,40 @@
+body{
+    margin: 0;
+    padding: 25px 10;
+    }
+  h1, p {
+    text-align:center;
+    }
+  
+  
+  #image{
+    height:auto;
+    max-width:100%;
+    display:block;
+    padding: 30px;
+  }
+  #tribute-link{
+    color: rgb(252, 15, 15);
+
+  }
+   h2{
+    font=size:25px;
+     }
+    i
+  #img-caption {
+    font-size: medium;
+    color: rgb(94, 68, 36);
+    padding:20px;
+  }
+#info{
+  line-height: 30px;
+  font-size: medium;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rgba(221, 237, 225, 0.856);
+}
+    
+  #tribute-info{
+    font-size: medium
+    font-family:algerien;
+
+  }
