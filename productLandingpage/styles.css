@@ -1,0 +1,152 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    }
+    .wrapper{
+      position:fixed;
+      top:0;
+      background:white;
+      width:100%;
+    }
+header{
+    display:flex;
+ justify-content:space-between;
+    min-height:15px;
+   align-items:center;
+ }
+ .logo{
+    max-width: 300px;
+    
+}
+header .nav-link {
+  text-decoration: none;
+}
+
+.nav-link:hover{
+color: var(--primary-color);
+border-bottom:  2px solid var(--primary-color);
+} 
+
+
+.nav-link-container{
+  display:flex;
+  justify-content:space-evenly;
+  width:300px;
+  
+  }
+  .get-started-section{
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  margin-top:px;
+  margin-bottom:20px;
+  }
+  
+  .icon{
+    display: flex;
+      justify-content: space-around;
+      margin-bottom: 40px;
+      padding: 5px 30px;
+      align-items: center;
+  }
+  
+  
+  .features-container {
+    margin-top: 100px;
+}
+
+.feature {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+    padding: 5px 30px;
+    align-items: center;
+}
+
+.feature-icon {
+    color: var(--primary-color);
+    font-size: 64px;
+    display: block;
+    flex: 1;
+}
+
+.feature-description {
+    flex: 5;
+}
+.btn {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 7px 20px;
+  font-size: 15px;
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 2px;
+  font-weight: bold;
+}
+
+.btn:hover{
+  background-color: #FF4848;
+}
+.get-started-section input {
+  padding: 5px 20px;
+  width: 300px;
+  margin-top: 20px;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+.video-container {
+  text-align: center;
+}
+
+.pricing-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+ol li {
+  list-style-type: none;
+}
+.product {
+  padding: 5px;
+  min-width: 400px;
+  margin: 20px auto; 
+}
+.footer {
+   display: flex;
+   justify-content: flex-end;
+   
+}
+footer .footer-link {
+    text-decoration: none;
+}
+footer ul li {
+    padding: 5px;
+}   
+footer span {
+    margin-top: 5px;
+    display: flex;
+    justify-content: flex-end;
+    font-size: bold;
+    color: var(--muted-color)
+}
+
+footer {
+  background-color: var(--gray-color);
+  padding: 20px;
+}
+@media (max-width: 600px){
+  body{
+    background-color: lightblue;
+  }
+}
+    
+ 
+
+
