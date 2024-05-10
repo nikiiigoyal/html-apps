@@ -1,0 +1,119 @@
+body{
+    box-sizing: border-box;
+    padding:0;
+    margin: 0;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+    width: 100%;
+    font-family: 'Times New Roman', sans-serif;
+}
+main{
+    margin: auto;
+    width: 789px;
+    height: 625px;
+    background-color: white;
+    border: 2px solid black;
+}
+h1{
+    text-align: center;
+    margin: 7px auto 0px auto;
+}
+.heading{
+ text-align: center;
+ width: 95%;
+ height: 89px;
+ background-color: #ddd;
+ text-align: center;
+ margin: 40px auto;
+ padding: 3px;
+}
+.keyword{
+    padding: 2px;
+    width: 233px;
+}
+.first-row{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 0 10px;
+    margin-top: 40px;;
+}
+.calculator{
+    width: 200px;
+    height: 160px;
+    border: none;
+    border-radius: 5px;
+    text-align: left;
+    padding: 23px;
+    
+    background-color: #ffc7c7
+}
+.statistics{
+    width: 200px;
+    height: 160px;
+    border: none;
+    border-radius: 5px;
+    text-align: left;
+    padding: 23px;
+    background-color: #ffe2e2;
+}
+.stats-table{
+    width: 200px;
+    height: 160px;
+    border: none;
+    border-radius: 5px;
+    text-align: left;
+    padding: 23px;
+    background-color: #FFCFDF;
+}
+.second-row{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 0 10px;
+}
+.calendar{
+    width: 200px;
+    height: 160px;
+    border: none;
+    border-radius: 5px;
+    text-align: left;
+    padding: 23px;
+    display: flex;
+    flex-direction: column;
+}
+.news{
+    width: 200px;
+    height: 160px;
+    border: none;
+    border-radius: 5px;
+    text-align: left;
+    padding: 23px;
+    display: flex;
+    flex-direction: column;
+    align-items: start
+    
+}
+.api{
+    width: 200px;
+    height: 160px;
+    border: none;
+    border-radius: 5px;
+    text-align: left;
+    padding: 23px;
+    display: flex;
+    flex-direction: column;
+    align-items: start
+}
+button{
+    padding: 11px;
+    border-radius: 10px;
+    background-color:transparent;
+    margin-top:auto;
+}
+.second-row button{
+    color:red;
+}
+.first-row button:hover{
+    background-color: #ffffff;
+
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>validating form</title>
+  </head>
+  <body>
+    <form>
+      <div class="form-wrapper">
+        <div class="name-section">
+          <label for="first-name" class="first-name">First Name</label>
+          <input
+            type="text"
+            placeholder="Enter first Name"
+            id="first-name"
+            name="name"
+          />
+          <label for="last-name" class="last-name">Last Name</label>
+          <input type="text" placeholder="Enter last Name" id="last-name" />
+        </div>
+        <div class="email-section">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            placeholder="Enter a valid email"
+            id="email"
+            class="full-width"
+            name="email"
+          />
+        </div>
+        <div class="password-section">
+          <label for="password">Password</label>
+          <input
+            type="text"
+            placeholder="Enter Password"
+            id="password"
+            class="full-width"
+            name="password"
+          />
+        </div>
+        <div class="phone-number">
+          <label for="phone-number">Phone number</label>
+          <input
+            type="number"
+            placeholder="Enter valid phone number"
+            id="phone-number"
+            class="full-width"
+            name="phonenumber"
+          />
+        </div>
+        <div class="bio">
+          <label for="bio">Bio</label>
+          <input
+            type="text"
+            placeholder="Enter your bio"
+            id="bio"
+            class="full-width"
+            name="bio"
+          />
+        </div>
+        <div class="button">
+          <button class="full-width" type="submit">Submit</button>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

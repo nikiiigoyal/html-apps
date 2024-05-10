@@ -1,0 +1,145 @@
+
+
+*, *::after, *::before {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-color: #f1dee1;
+    font-size: 0.6rem;
+    font-family: sans-serif;
+    
+}
+main{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    width: 85%;
+    height: 94vh;
+    padding: 3em 0 5em 5em;
+    margin: 3em auto 1em auto;
+}
+header{
+    display: grid;
+    grid-template-columns: 11% 34% 10% 30% 10% 5%;
+}
+.head-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    background-color: rgba(216, 216, 216, 0.3);
+    color: #6a6768;
+    margin-left: 1emm
+
+}
+.line{
+    margin: 0 0.3em;
+    font-size: 1rem;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    width: 10rem;
+    font-size: 0.52rem;
+    color: #6a6768;
+}
+.logo h2{
+    font-weight: 400;
+    color: black;
+    font-size: 1.18rem;
+}
+.navbar ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+    margin-top: 0.5em;
+    text-decoration: none;
+
+}
+.navbar{
+    display: flex;
+    /* align-items: flex-end; */
+    justify-content: flex-end;
+    text-decoration: none;
+    margin-top: -24px;
+    margin-right: 42px;
+}
+.navbar ul li{
+    margin: 0 1em;
+}
+.sub-main{
+    display: flex;
+    justify-content: space-between;
+    margin:-0.2em 219px -32px 19em;
+}
+.details{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 60vh;
+    margin-top: 10em;
+    justify-content: flex-start;
+}
+.details h2{
+    font-size: 5.3em;
+    font-weight: 400;
+}
+button{
+    color: #fff;
+    background-color: #b61428;
+    border: none;
+    border-radius: 110px;
+    font-size: 0.41rem;
+    padding: 1.55em 2.1em;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+    font-weight: 200;
+    letter-spacing: 1px;
+}
+.move-bar{
+    width: 50px;
+    margin-top: 11.3em;
+    margin-right: 3em;
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-end;
+}
+.bar{
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #d8d8d8d8
+}
+.current-bar{
+    width: 20px;
+    border-radius: 50px;
+    background-color: #b61428;
+}
+.perfume-img{
+    display: flex;
+    align-items: flex-start;
+    background-color: #ffc5cc;
+    width: 370px;
+    height: 200px;
+    margin-top: 8em;
+}
+.perfume-img div:last-child {
+    order: -2;
+}
+.perfume-img div:first-child {
+    z-index: 2;
+}
+
+.navbar a{
+    color: #6a6768;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.51rem;
+}
