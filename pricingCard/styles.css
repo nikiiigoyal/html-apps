@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "Montserrat", sans-serif;
+    background-color: #f7f7f7;
+    width: 95%;
+}
+.pricing-card-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+
+/* designing header by flex and adding padding and yext in center*/
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    padding: 40px 0;
+    color: hsl(233, 13%, 40%);
+}
+h1{
+    margin-bottom: 30px;
+    color: #6D708D;
+}
+.toggle{
+    color: #B3B5C6;
+    display: flex;
+    align-items: center;
+    margin-top: 20px
+
+}
+
+
+.sub{
+    background: linear-gradient(135deg, rgba(163, 168, 240, 1) 0%, rgba(105, 111, 221, 1) 100%);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 1.6rem;
+    width: 3.3rem;
+    border-radius: 1.6rem;
+    padding: 0.3rem;
+}
+#checkbox{
+    display: none;
+}
+.circle{
+    background-color: #fff;
+    height: 1.3rem;
+    width: 1.3rem;
+    border-radius: 50%;
+}
+.toggle-btn{
+    margin: 0 1rem;
+}
+.card{
+    background: #fff;
+    color: hsl(233, 13%, 49%);
+    border-radius: 7px;
+    width: 32%;
+    min-width: 350px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+ul li{
+    list-style-type: none;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid hsl(233, 13%, 49%);
+}
+.item-1{
+    border: none;
+    padding: 30px;
+    font-size: 21px;
+}
+h2{
+    font-size: 30px;
+    text-align: center;
+    
+   
+}
+.num {
+    border: none;
+}
+button{
+    width: 150px;
+    padding: 10px 0;
+    background-image: linear-gradient(135deg, rgba(163, 168, 240, 1) 0%, rgba(105, 111, 221, 1) 100%);
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    cursor: pointer;
+}
+.Professional-plan{
+    background-image: linear-gradient(135deg, rgba(163, 168, 240, 1) 0%, rgba(105, 111, 221, 1) 100%);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(1.1); /*to zoom in */
+    z-index: 1; /*for div box to be upside*/
+    text-align: center;
+}
+.Professional-plan button{
+    background-image: none;
+    background-color: #fff;
+    color: hsl(233, 13%, 49%);
+    border : none;
+}
