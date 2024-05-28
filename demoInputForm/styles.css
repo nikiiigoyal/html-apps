@@ -85,9 +85,11 @@ h1{
 }
 .five{
     background-color:#1f2226 ;
+    padding: 12px;
 }
 .six{
     background-color: #8f5d0e;
+    margin-bottom: -10px;
 }
 /* symbol and text*/
 .text{
@@ -110,4 +112,8 @@ h1{
 }
 .yande{
     color:#9e978f;
+}
+.second-container{
+    position: relative;
+    top: -9px;
 }
