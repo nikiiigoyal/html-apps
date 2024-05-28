@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Game Rock,Paper.Scissor</title>
+  </head>
+  <body>
+    <h1>Let's play Rock,Paper,scissors!</h1>
+    <main>
+      <section class="rules-container">
+        <div>
+          Rules to the Game
+          <ul>
+            <li>You will be playing against the computer.</li>
+
+            <li>You can choose between Rock, Paper, and Scissors.</li>
+
+            <li>The first one to three points wins.</li>
+
+            <li>
+              Here are the rules to getting a point in the game: Rock beats
+              Scissors Scissors beats Paper Paper beats Rock If the player and
+              computer choose the same option (Ex. Paper and Paper), then no one
+              gets the point.
+            </li>
+          </ul>
+        </div>
+      </section>
+      <div class="score-container">
+        <strong>Player Score: <span id="player-score">0</span></strong>
+        <strong>Computer score: <span id="player-score">0</span></strong>
+      </div>
+      <section class="option-container">
+        <h2>Choose an option</h2>
+        <div class="button-container">
+          <button id="rock-btn" class="btn">Rock</button>
+          <button id="paper-btn" class="btn">Paper</button>
+          <button id="scissors-btn" class="btn">Scissors</button>
+        </div>
+      </section>
+      <div class="results-container">
+        <p id="results-msg"></p>
+        <p id="winner-msg"></p>
+        <button class="btn" id="reset-game-btn">Play again?</button>
+      </div>
+    </main>
+  </body>
+</html>

@@ -42,7 +42,7 @@ body{
     border-radius: 25px;
     margin-right: 30px;
     position: relative;
-    transition: flex 0.1ms 1s ease;
+    transition: flex 1s ease;
     cursor: pointer;
     background-position: center;
     background-size: cover;
@@ -64,5 +64,5 @@ body{
   }
   /* effect on whole image*/
   .panel:hover{
-    flex: 1.5;
+    flex: 1;
   }
