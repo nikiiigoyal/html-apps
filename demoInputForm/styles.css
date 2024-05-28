@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #1a1b1e;
+    font-family: "Roboto", sans-serif;
+    max-width: 90vw;
+}
+header{
+    display: flex;
+    color: #fff;
+    justify-content: space-around;
+}
+.ui{
+padding: 60px;
+color: #454545;
+}
+h1{
+    font-size: 42px;
+    font-weight: 500;
+    margin: 44px;
+}
+/* designing main container*/
+.container{
+    display: flex;
+    color: #fff;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+/*.first-container{
+    display: flex;
+    flex-direction: column;
+}
+.inactive-box{
+   
+    margin-bottom: 45px;
+}*/
+/* design to topic*/
+.topic{
+    text-align: center;
+    font-size: 10px;
+    margin-bottom: 15px;
+}
+/* both container flex*/
+.inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* to remove border and background from placeholder*/
+.rem{
+    border: none;
+    background: none;
+    
+}
+/* adding padding and margin to inputs*/
+.input{
+    font-size: 8px;
+    display: grid;
+    background: #1f2226;
+    margin-top: 31px;
+    padding: 6px 100px 9px 17px;
+    border-radius: 4px;
+}
+/* adding bottom margin */
+.box{
+    margin-bottom: 20px;
+}
+/* changing background color of all boxes*/
+.one{
+    background-color: #1f2226;
+}
+.two{
+    background-color: #232528;
+}
+.three{
+    background-color: #102534;
+}
+.four{
+    background-color:#232528 ;
+}
+.five{
+    background-color:#1f2226 ;
+}
+.six{
+    background-color: #8f5d0e;
+}
+/* symbol and text*/
+.text{
+    display: flex;
+}
+.material-symbols-outlined{
+    font-size: 11px;
+    padding-right: 5px;
+    color: #0286dd;
+}
+.text p{
+    color: #0286dd;
+    font-size: 10px;
+}
+/* text of sixth box*/
+.last p{
+    font-size: 8px;
+    margin-left: 25px;
+    color: #8d640e;
+}
+.yande{
+    color:#9e978f;
+}
