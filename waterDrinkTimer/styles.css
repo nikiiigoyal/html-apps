@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+body{
+    font-family: "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    background: linear-gradient(to right ,#00bffa,#00adf7,#009ef5,#0069ec);
+}
+
+
+.main-screen{
+    width: 41vw;
+    border: 10px solid #f7c3fc;
+    height: 88vh;
+    border-radius: 50px;
+    margin-top: 58px;
+    margin-left: 112px;
+    max-width: 333px;
+    background-color: #fff;
+}
+/*designiong navigation bar*/
+.navigation{
+    display: flex;
+    justify-content: end;
+    margin-top: -23px;
+    margin-right: 19px;
+    color: #1f57b0;
+}
+nav p {
+    margin-left: 18px;
+    font-size: 9px;
+}
+nav .material-symbols-outlined{
+    font-size: 13px;
+}
+/* designing texts*/
+h2{
+    font-size: 13px;
+    color: #1f57b0;
+    line-height: 18px;
+    margin: 10px 12px 7px 78px;;
+}
+/*.circle{
+    width: 189px;
+    margin-left: 38px;
+    border: 10px solid (linear-gradient(to right, #0165ec,#01c5fb,#ffff));;
+    border-radius: 50%;
+    height: 178px;
+    margin-top: 43px; */
+
+
+.circle{
+    background-image: url(/waterDrinkTimer/image/water\ drink\ timer\ demo.png);
+    width: 313px;
+    height: 342px;
+    margin-top: 33px;
+}
+section{
+    display: flex;
+    /*background-color: #1f57b0;
+    padding-bottom: 134px;
+    border-radius: 31px;*/
+}
+.iconcircle{
+    width: 28px;
+    height: 28px;
+    border: 2px solid black;
+    border-radius: 50%;
+}
