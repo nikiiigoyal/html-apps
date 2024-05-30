@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: black;
+    color: #fff;
+    
+    
+}
+.gradient-text {
+    background-image: linear-gradient(to right,#E94BBB 0%, #3793FF 100%);  /* Replace color1 and color2 with your desired colors */
+    -webkit-background-clip: text; /* For Webkit browsers */
+    background-clip: text;  /* Standard property */
+    color: transparent;  /* Makes the actual text color invisible */
+    padding-top: 82px;
+    margin-right: 345px;
+    padding-bottom: 30px;
+    
+  }
+  /*section{
+    display: flex;
+    flex-direction: column;
+  }*/
+  header{
+    display: flex;
+    align-items: center;
+    flex-direction: column
+    ;
+  }
+  header p{
+    margin-top: 12px;
+    letter-spacing: 0.1em;
+    font-size: 15px;
+  }
+  header button{
+    background-color: black;
+    padding: 11px 25px;
+    border-radius: 7px;
+    color: #fff;
+    border: none;
+  }
+  /*designing div */
+ .tasks{
+    display: flex;
+    justify-content: space-around;
+   /* border: 2px solid grey; */
+    padding: 14px 53px;
+    border-radius: 10px;
+    background-color: #2E2E2E;
+  }
+  /*design to icon*/
+  .schedule{
+    margin-right: 13px;
+   /* border: 1px solid grey; */
+    padding: 8px 9px;
+    border-radius: 7px;
+    margin-left: 184px;
+    /* margin-top: 3px; */
+    background-color: black;
+}
+.water{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 80px;
+    margin: auto;
+}
+.water p{
+    margin-left: -130px;
+    padding-top: 5px;
+}
+.walk{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 80px;
+    margin: auto;
+}
+
+.walk p{
+    margin-left: -130px;
+    padding-top: 5px;
+}
+.email{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 80px;
+    margin: auto;
+}
+
+.email p{
+    margin-left: -130px;
+    padding-top: 5px;
+}
