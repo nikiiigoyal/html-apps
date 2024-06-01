@@ -11,48 +11,105 @@
     <title>TODO App</title>
   </head>
   <body>
-    <header>
-      <h1 class="gradient-text">TODO app</h1>
-      <div class="tasks">
-        <p>Task name</p>
-
-        <span class="material-symbols-outlined schedule"> schedule </span>
-        <button>Add</button>
-      </div>
-    </header>
-    <section>
-      <div class="container">
-        <div class="water">
-          <span class="material-symbols-outlined circle"> check_circle</span>
-          <p>Drink water</p>
-
-          <span class="time"
-            >7:55 PM
-            <span class="material-symbols-outlined delete"> delete </span></span
-          >
+    <div class="align">
+      <header>
+        <h1 class="gradient-text">TODO app</h1>
+        <div class="tasks">
+          <p>Task name</p>
+          <div class="icons">
+            <span class="material-symbols-outlined schedule"> schedule </span>
+            <button>Add</button>
+          </div>
         </div>
-        <div class="walk">
-          <span class="material-symbols-outlined circle">
-            radio_button_unchecked</span
-          >
-          <p>Go to walk</p>
-
-          <span
-            >8:00 PM
-            <span class="material-symbols-outlined delete"> delete </span></span
-          >
+      </header>
+      <div class="taskNames">
+      <ul class="list-item">
+        <div class="list-left">
+          <li>
+            <span class="material-symbols-outlined circle">
+              check_circle</span>
+              <li class="text">Drink Water</li>
+          </li>
         </div>
-        <div class="email">
-          <span class="material-symbols-outlined circle">
-            radio_button_unchecked
-          </span>
-          <p>Write an email</p>
-          <span
-            >8:40 PM
-            <span class="material-symbols-outlined delete"> delete </span></span
-          >
+        <div class="list-right">
+          <li>
+            <span class="material-symbols-outlined delete"> delete </span>
+          </li>
+          <li>7:55 PM</li>
         </div>
-      </div>
-    </section>
+      </ul>
+      <ul class="list-item">
+        <div class="list-left">
+          <li>
+            <span class="material-symbols-outlined circle">
+              radio_button_unchecked</span
+            >
+          </li>
+          <li class="text">Go To Walk</li>
+        </div>
+        <div class="list-right">
+          <li>
+            <span class="material-symbols-outlined delete"> delete </span>
+          </li>
+          <li>8:00 PM</li>
+        </div>
+      </ul>
+      <ul class="list-item last">
+        <div class="list-left">
+          <li>
+            <span class="material-symbols-outlined circle">
+              radio_button_unchecked</span
+            >
+          </li>
+          <li class="text">Write an Email</li>
+        </div>
+        <div class="list-right">
+          <li>
+            <span class="material-symbols-outlined delete"> delete </span>
+          </li>
+          <li>8:37 PM</li>
+        </div>
+        </ul>
+    </div>
+    </div>
   </body>
 </html>
+
+<!-- <div class="container">
+          <div class="water">
+            <span class="material-symbols-outlined circle"> check_circle</span>
+            <p>Drink water</p>
+
+            <span class="time"
+              >7:55 PM
+              <span class="material-symbols-outlined delete">
+                delete
+              </span></span
+            >
+          </div>
+          <div class="walk">
+            <span class="material-symbols-outlined circle">
+              radio_button_unchecked</span
+            >
+            <p>Go to walk</p>
+
+            <span
+              >8:00 PM
+              <span class="material-symbols-outlined delete">
+                delete
+              </span></span
+            >
+          </div>
+          <div class="email">
+            <span class="material-symbols-outlined circle">
+              radio_button_unchecked
+            </span>
+            <p>Write an email</p>
+            <span
+              >8:40 PM
+              <span class="material-symbols-outlined delete">
+                delete
+              </span></span
+            >
+          </div>
+        </div> -->

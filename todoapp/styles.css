@@ -6,32 +6,42 @@
 }
 body{
     font-family: "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    background-color: black;
+    background-color:#2E2E2E;;
     color: #fff;
     max-width: 100vw;
-    
-    
+}
+/* aligning the main box ,bringing it at the center */
+.align{
+  max-width: 800px;
+  margin: auto;
+  background-color: black;
+ margin-top: 75px;
+ margin-left: 321px; 
+ padding-bottom: 69px      
+
+
 }
 .gradient-text {
-    background-image: linear-gradient(to right,#E94BBB 0%, #3793FF 100%);  /* Replace color1 and color2 with your desired colors */
-    -webkit-background-clip: text; /* For Webkit browsers */
-    background-clip: text;  /* Standard property */
-    color: transparent;  /* Makes the actual text color invisible */
-    padding-top: 82px;
-    margin-right: 345px;
-    padding-bottom: 30px;
+ background-image: linear-gradient(to right, #E94BBB 0%, #8E6CD7 50%, #5D83F0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  padding-top: 60px;
+  /* margin-right: 339px; */
+  padding-bottom: 30px;
+  margin-left: 69px;
     
   }
   /*section{
     display: flex;
     flex-direction: column;
   }*/
-  header{
+  /* header{
     display: flex;
     align-items: center;
     flex-direction: column
-    ;
-  }
+    ; */
+  
   header p{
     margin-top: 12px;
     letter-spacing: 0.1em;
@@ -44,14 +54,29 @@ body{
     color: #fff;
     border: none;
   }
-  /*designing div */
+  /*designing task bar*/
  .tasks{
-    display: flex;
-    justify-content: space-around;
-   /* border: 2px solid grey; */
-    padding: 14px 53px;
-    border-radius: 10px;
+  display: flex;
+    justify-content: space-between;
+    /* border: 2px solid grey; */
+    padding: 12px 48px;
+    border-radius: 17px;
     background-color: #2E2E2E;
+    margin: 0 75px;
+    margin-right: 145px;
+  }
+  .icons{
+    display: flex;
+  }
+  
+  .list-item{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    margin-top: 53px;
+    margin-right: -58px;
+    padding: 5px 12px;
+    padding-left: 70px;
   }
   /*design to icon*/
   .schedule{
@@ -63,56 +88,33 @@ body{
     /* margin-top: 3px; */
     background-color: black;
 }
-.water{
-    display: flex;
-    justify-content: space-around;
-    padding-top: 80px;
-    /* margin: 0 10px; */
-    padding-left: 98px;
-    margin-right: -138px;
-
+.taskNames{
+  max-width: 600px;
 }
-.water p{
-    margin-left: -413px;
-    padding-top: 5px;
-    font-size: 25px;
+.list-left{
+  display: flex;
+  gap: 33px;
 }
-
-.walk{
-    display: flex;
-    justify-content: space-around;
-    padding-top: 80px;
-    padding-left: 98px;
-    margin-right: -138px;
-}
-
-.walk p{
-    margin-left: -413px;
-    padding-top: 5px;
-    font-size: 25px;
-}
-.email{
-    display: flex;
-    justify-content: space-around;
-    padding-top: 80px;
-    /*margin: auto;*/
-    padding-left: 98px;
-    margin-right: -138px;
-}
-
-.email p{
-    margin-left: -413px;
-    padding-top: 5px;
-    font-size: 25px;
+.list-right{
+  display: flex;
+    flex-direction: row-reverse;
+    font-size: 19px;
+    line-height: 34px;
+    gap: 7px;
 }
 .circle{
-    color: #3B9464;
-    line-height: 1.5;
-    font-size: 30px;
+  color: #316E4D;
+  font-size: 35px;
+}
+/* desin on text  */
+.text{
+  font-size: 23px;
+    letter-spacing: 1px;
+
 }
 .delete{
-    color: #D64646;
+  color: #592727;
 }
-span{
-    font-size: 21px;
-}
+/* .last{
+  padding-left: 8px;
+} */
