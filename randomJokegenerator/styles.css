@@ -36,7 +36,7 @@ h1{
 p{
     font-size: 1.9rem;
     margin: 50px 0;
-    width: 599px;
+    /* width: 599px; */
     letter-spacing: 0.9px;
     line-height: 40px;
 }
@@ -51,4 +51,6 @@ button{
     padding: 10px;
     margin: -38px 217px
 
+
 }
+
