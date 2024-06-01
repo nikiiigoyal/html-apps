@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: white;
+    
+}
+.wrapper{
+    background-color: black;
+    width: 65vh;
+    height: 96vh;
+    margin: auto;    /* to make it oin center*/
+    border-radius: 15px;
+    font-size: 46px;
+    margin-top: 10px;
+    font-family: "Open+Sans", Arial, Helvetica, sans-serif;
+}
+.caln-screen{
+    color: white;
+    text-align: right;
+    padding: 49px 19px 0 0;
+    font-size: 60px;
+}
+.btn-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.btn-row{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-bottom: 13px;
+}
+button{
+    padding: 1px 6px;
+    border-radius: 50%;
+    font-size: 20px;
+    border: none;
+    width: 56px;
+    height: 55px;
+}
+.row-1-btn{
+    background-color: #727272;
+    color: black;
+}
+.btn-0{
+    width: 44%;
+    height: 50px;
+    border-radius: 34px;
+}
+.calcn-btn-orange{
+   background-color: #ffa500;
+   color: #fff
+   ;
+}
+.digit{
+    background-color: #333333;
+    color: #fff;
+}
+button:hover{
+    background-color: indigo;
+}
