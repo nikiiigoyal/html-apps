@@ -39,6 +39,9 @@
     border: 5px solid var(--yellow);
     background-color: var(--white);
     color: var(--very-dark-blue);
+    height: 43px;
+    transition: all 1s ease;
+  
   }
   
   .rules-container ul {
@@ -47,6 +50,7 @@
   
   .rules-container li {
     margin: 10px 0;
+   
   }
   @media (min-width: 760px) {
     .rules-container {
@@ -68,6 +72,7 @@
   .results-container {
     font-size: 1.3rem;
     margin: 15px 0;
+   
   }
   
   #winner-msg {
@@ -79,4 +84,7 @@
     margin: 20px auto;
   }
   
+  .expand{
+          height:220px;
+  }
   
