@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    /* --background-body-color--: #ca3737; */
+}
+body{
+   background-color: black;
+   font-family: "Poppins", sans-serif;
+}
+.wrapper{
+   background-color: #cccc;
+   width: 60%;
+   /* height: 16%; */
+   margin: auto;
+   margin-top: 48px;
+   padding-top: 20px;
+   padding-bottom: 17px;
+ }
+ .main-content{
+   width: 35vw;
+    height: 78vh;
+    margin: auto;
+    background-color: #fff;
+    text-align: center;
+    border: 2px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+ }
+.day-week-container{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    /* padding: 21px 10px 0px 0px; */
+    height: 78px;
+    border-bottom: 1px solid #F4F4F4;
+}
+/* .day{
+   width: 48%;
+    border: 1px solid black;
+    height: 66px;
+    text-align: -webkit-match-parent;
+    padding: 17px 10px 5px 5px;
+    font-size: 24px;
+} */
+.week{
+   border-left: 1px solid #F4F4F4;
+    height: 73px;
+    width: 50%;
+    background-color: #FAE9B3;
+    padding-top: 11px;
+    font-size: 30px;
+    letter-spacing: 6px;
+    color: #8E9197;
+    font-weight: 300;
+}
+.day{
+   width: 50%;
+    padding: 15px;
+    font-size: 31px;
+    color: #DEDEDE;
+    letter-spacing: 6px;
+}
+.degree-container{
+   display: flex;
+   justify-content: space-around;
+   
+}
+.list{
+   list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+.straight-line{
+   height: 168px;
+    width: 4px;
+    background-color: #FAE9B3;
+    margin: auto;
+}
+/* .three{
+  line-height: 3.8;
+   
+}
+.four{
+   line-height: 5.5;
+}
+.five{
+   line-height: 2.5; */
+
+.third{
+   height: 130px;
+   width: 4px;
+   padding: 18px 0;
+}
+.fourth{
+   height: 100px;
+   width: 4px;
+}
+.fifth{
+   height: 150px;
+   width: 4px;
+}
+.navigation{
+   display: flex;
+    justify-content: space-around;
+   
+    background-color: #FAE9B3;
+    padding: 6px 0px 13px 0px;;
+    color: #ffff;
+}
+.icons{
+   font-size: 40px;
+}
+.temp{
+font-size: 47px;
+    color: #888888;
+}
