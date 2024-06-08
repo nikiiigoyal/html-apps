@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "Roboto", sans-serif;
+  font-weight: 100;
+    background-color: #3d3d3d;
+    color: white;
+}
+/* design to text border radius */
+h2{
+    text-align: center;
+    opacity: 0.2;
+    font-size: 46px;
+    font-weight: lighter;
+    color: #ffff;
+    margin: 65px auto 15px auto;
+}
+/* design to link  */
+.credit{
+    color: #565656;
+    text-align: center;
+    font-size: 13px;
+}
+.credit a{
+    color: #565656;
+    text-decoration: none;
+}
+
+/* designing div and textarea */
+.box{
+    width: 470px;
+    /* height: 302px; */
+    background-color: #e9eaee;
+    border: 2px solid #ffff;
+    padding: 44px 40px 20px 40px;
+    margin: 0 auto;
+    text-align: center;
+}
+textarea{
+    background: #fafafc;
+    border: 1px solid #a3a3a3;
+    resize: none;
+    width: 385px;
+    height: 239px;
+    font: normal 15px Monaco, 'Courier New', monospace;
+   padding: 9px 10px;
+    color: #2f2f2f;
+    overflow: hidden;
+}
+.options label{
+    margin-right: 9px;
+    color: #393939;
+    font-size: 12px;
+}
+.container{
+    width: 550px;
+    position: relative;
+    margin: 50px auto;
+}
+/* .input-wrapper{
+    position: absolute;
+    width: 87px;
+    height: 31px; */
+/* }
+
+/* .input-wrapper{ */
+    /* position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px 8px;
+    border: 1px solid #2f2f2f;
+    background-color: #393939;
+    color: #fff; */
+.input-wrapper {
+    position: absolute;  /* Remove elements from normal flow */
+  top: 10px;  /* Adjust top position as needed */
+  left: 10px;  /* Adjust left position as needed */
+  width: 100px;  /* Set width of the input boxes */
+  height: 30px;  /* Set height of the input boxes */
+  padding: 5px;  /* Add some padding for better usability */
+  /* border: 1px solid #ccc;  */
+}
+ .input-wrapper.tl{
+    top: -42px;
+    left: -68px;
+    text-align: right;
+}
+.input-wrapper.tr{
+    top: -43px;
+    left: 514px;
+    text-align: left;
+}
+.input-wrapper.br{
+    top: 347px;
+    left: -68px;
+    text-align: right;
+}
+.input-wrapper.bl{
+    top: 347px;
+    left: 514px;
+    text-align: left;
+    
+} 
+.number{
+    width: 32px;
+    text-align: center;
+    background: #393939;
+    color: #fff;
+    border: 1px solid black;
+    padding: 4px 3px;
+}
+.carbon-ads{
+    display: block;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    padding: 1em;
+    max-width: 360px;
+    background-color: #515151;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.carbon-ads a {
+    color: #b8b8b8;
+    text-decoration: none;
+    cursor: revert;
+}
+.carbon-ads img{
+    max-width: 130px;
+    float: left;
+    margin-right: 13px
+}
+.carbon-sponsered{
+    display: block;
+    overflow: hidden;
+    margin-top: 48px;
+    font-size: 10px;
+}
