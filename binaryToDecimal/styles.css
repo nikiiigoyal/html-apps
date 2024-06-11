@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #0075ff;
+    font-family: "Poppins", sans-serif;
+}
+.container {
+    background-color: #ffffff;
+    width: 80vmin;
+    max-width: 37.5em;
+    padding: 3em 2.5em;
+    position: absolute;
+    /* transform: translate(-50%, -50%); */
+    top: 13%;
+    left: 34%;
+    border-radius: 0.62em;
+    box-shadow: 0 1.2em 2.5em rgba(0, 21, 44, 0.18);
+  }
+  h2 {
+    font-size: 1.8em;
+    color: #0075ff;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 1.3em;
+  }
+  /* .wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.8em; */
+  
+  label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: 500;
+    color: #050121;
+  }
+  input {
+    position: relative;
+    /* font-size: 1.1em; */
+    width: 37%;
+    padding: 0.5em;
+    border-radius: 8px;
+    border: 1.5px solid #43405c;
+    color: #43405c;
+    outline: none;
+  }
+  input:focus {
+    border-color: #0075ff;
+  }
+  #convert-btn {
+    border: none;
+    margin: 25px 3px auto;
+    /* display: block; */
+    border: 0.5px solid black;
+    height: 29px;
+    padding: 5px 10px;
+    border-radius: 6px
+  }
+  #convert-btn:hover{
+    background-color: #982150;
+  }
+  #convert-btn:active{
+    color: blueviolet;
+  }
+  #result {
+    margin: 21px 0px 3px 23px;
+    min-width: 200px;
+    width: 485px;
+    min-height: 80px;
+    /* word-break: break-word; */
+    padding: 20px;
+    border: 5px solid slateblue;
+    font-size: 21px;
+    text-align: center;
+    height: 70px;
+}
+    
+    
