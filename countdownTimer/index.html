@@ -9,17 +9,28 @@
   <body>
     <div class="container">
       <div class="top">
-        <h3>Session TImer</h3>
+        <p>Time remaining:</p>
+        <div id="countdown">
+          <span id="days">00</span>
+          <div class="timers">days</div>
+          <span id="hours">00</span>
+          <div class="timers">hours</div>
+          <span id="minutes">00</span>
+          <div class="timers">minutes</div>
+          <span id="seconds">00</span>
+          <div class="timers">seconds</div>
+        </div>
       </div>
       <div class="bottom">
         <label for="name"></label>
         <input type="text" id="name" placeholder="Event Name" />
-        <span>enter name of an event</span>
+        <span id="none-display">enter name of an event</span>
         <label for="date"></label>
         <input type="date" id="date" placeholder="eg:03/052024" />
-        <span>enter date of an event</span>
+        <span id="none-display">enter date of an event</span>
         <label for="time"></label>
-        <input type="text" id="time" placeholder="eg:12:00" />
+        <input type="time" id="time" placeholder="eg:12:00" />
+        <button id="submit-btn">start</button>
       </div>
     </div>
     <script src="script.js"></script>

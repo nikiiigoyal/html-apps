@@ -24,23 +24,31 @@ body{
     position: relative;
     z-index: 1;
 }
+.timers{
+    font-size: larger;
+    display: flex;
+    flex-direction: row;
+}
 .bottom{
     background-color: rgb(253 253 253);
     width: 310px;
     height: 277px;
     margin: auto;
     position: absolute;
-    right: 463px;
-    top: 290px;
+    right: 0;
+    top: 0;
+    bottom: -140px;
+    left: 0;
     display: grid;
 }
-span{
+#none-display{
     display: none;
 }
-h3{
+p{
     text-align: center;
-    color: rgb(255 208 196);
-    padding: 56px;
+    padding: 21px;
+    color: #87405b;
+    font-size: 20px;
 }
 input{
     /* margin: 11px 143px 15px 2px;
@@ -55,4 +63,13 @@ input{
     flex-wrap: wrap;
     padding-left: 14px;
     /* padding-bottom: 12px; */
+}
+button{
+    font-size: 14px;
+    color: brown;
+}
+button:hover{
+    
+        background-color: rgb(227 97 79);
+    
 }
