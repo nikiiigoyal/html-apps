@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* height: 100%; */
+}
+body{
+    font-family: "Lato", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.quiz-container{
+    width: 450px;
+    /* color: white;  */
+    font-size: 110%;
+    margin: auto
+}
+.quiz-container h1{
+    text-align: center;
+    color: #cb2127;
+    margin-bottom: 10px;
+}
+.question{
+    background-color: #cb2127;
+    margin-bottom: 25px;
+    font-size: 115%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+}
+/* to style arrow in a question box */
+    .question:after {
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        left: 35px;
+        width: 0; 
+        height: 0; 
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+         border-top: 15px solid #cb2127;
+      }
+
+.box {
+    padding: 10px 15px;
+  }
+  .answers{
+    list-style-type: none;
+  }
+
+span {
+    background-color: #cb2127;
+    color: white;
+    display: block;
+    float: left;
+    margin-left: -15px;
+    margin-top: -10px;
+    margin-right: 0px;
+    padding: 10px 10px;
+    text-align: center;
+    
+    width: 40px;
+  }
+  
