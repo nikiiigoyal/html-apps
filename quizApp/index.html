@@ -7,27 +7,29 @@
     <title>quiz App</title>
   </head>
   <body>
-    <div class="quiz-container">
-      <h1>Quiz interface</h1>
-      <div class="question box">
-        <p><span>1.</span> What does CSS stands for?</p>
+    <div class="quiz-container quiz">
+      <div class="quiz-header">
+        <h2 class="question">Question text</h2>
+        <ul>
+          <li>
+            <input type="radio" name="answer" id="a" class="answer" />
+            <label for="a" class="a-text">option</label>
+          </li>
+          <li>
+            <input type="radio" name="answer" id="b" class="answer" />
+            <label for="b" class="b-text">option</label>
+          </li>
+          <li>
+            <input type="radio" name="answer" id="c" class="answer" />
+            <label for="c" class="c-text">option</label>
+          </li>
+          <li>
+            <input type="radio" name="answer" id="d" class="answer" />
+            <label for="d" class="d-text">option</label>
+          </li>
+        </ul>
       </div>
-      <ul class="answers">
-        <li class="answer box"></li>
-        <p><span>A</span> Computer Style Sheets</p>
-
-        <li class="answer box">
-          <p><span>B</span> Cascading Style Sheets</p>
-        </li>
-        <li class="answer box">
-          <p><span>C</span> Colourful Style Sheets</p>
-        </li>
-
-        <li class="answer box">
-          <p><span>D</span> Creative Style Sheets</p>
-        </li>
-      </ul>
-      <button class="box">Send</button>
+      <button class="submit">Submit</button>
     </div>
     <script src="script.js"></script>
   </body>

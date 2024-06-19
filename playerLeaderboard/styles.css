@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
 *{
     box-sizing: border-box;
@@ -6,7 +5,7 @@
     padding: 0;
 }
 body{
-    font-family:"Roboto", sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
     background-image: linear-gradient(to right,#ffecd2 0%, #fcb69f 100%);
     display: flex;
     flex-direction: column;
@@ -36,4 +35,9 @@ button{
     opacity: 0.8;
     color: #fff;
     margin-top: 45px;
+}
+.error-msg{
+    display: none;
+    color: #991010;
+    font-size: 11px;
 }

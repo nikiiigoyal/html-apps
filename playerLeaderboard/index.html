@@ -9,9 +9,22 @@
   <body>
     <h1>Player Leaderboard</h1>
     <form>
-      <input type="text" name="first-name" placeholder="First Name" />
-      <input type="text" name="last-name" placeholder="Last Name" />
-      <select>
+      <input
+        type="text"
+        id="first-name"
+        name="first-name"
+        placeholder="First Name"
+      />
+      <span id="first-name-error" class="error-msg">Enter your First Name</span>
+      <input
+        type="text"
+        name="last-name"
+        id="last-name"
+        placeholder="Last Name"
+      />
+      <span id="last-name-error" class="error-msg">Enter your Last Name</span>
+      <select id="select-country">
+        <span id="country-error" class="error-msg">Select country</span>
         <option value="country">country</option>
         <option value="Afghanistan">Afghanistan</option>
         <option value="Albania">Albania</option>
@@ -32,8 +45,15 @@
         <option value="France">France</option>
         <option value="India">India</option>
       </select>
-      <input type="number" placeholder="Player score" min="-100" max="" />
-      <button type="submit">Add Player</button>
+      <input
+        type="number"
+        id="Player-score"
+        placeholder="Player score"
+        min="-100"
+        max=""
+      />
+      <button id="submit" type="submit">Add Player</button>
     </form>
+    <script src="script.js"></script>
   </body>
 </html>

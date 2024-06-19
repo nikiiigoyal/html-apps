@@ -7,30 +7,37 @@
     <title>countdown timer</title>
   </head>
   <body>
-    <div class="container">
-      <div class="top">
-        <p>Time remaining:</p>
-        <div id="countdown">
-          <span id="days">00</span>
-          <div class="timers">days</div>
-          <span id="hours">00</span>
-          <div class="timers">hours</div>
-          <span id="minutes">00</span>
-          <div class="timers">minutes</div>
-          <span id="seconds">00</span>
-          <div class="timers">seconds</div>
+    <div class="clock-input">
+      <input type="date" name="time-to" id="date" class="time-to" value="" />
+      <span id="date-error" class="error-msg">enter Date of an event</span>
+      <input type="text" id="name" placeholder="Event Name" class="time-to" />
+      <span id="eventname-error" class="error-msg">enter name of an event</span>
+      <input type="time" id="time" placeholder="eg:12:00" class="time-to" />
+      <span id="time-error" class="error-msg">enter time of an event</span>
+      <button id="submit-btn">start</button>
+    </div>
+
+    <div class="container" id="countdown">
+      <div class="container">
+        <div class="clock-column">
+          <p class="clock-day clock-timer" id="days"></p>
+          <p class="clock-label">Days</p>
         </div>
-      </div>
-      <div class="bottom">
-        <label for="name"></label>
-        <input type="text" id="name" placeholder="Event Name" />
-        <span id="none-display">enter name of an event</span>
-        <label for="date"></label>
-        <input type="date" id="date" placeholder="eg:03/052024" />
-        <span id="none-display">enter date of an event</span>
-        <label for="time"></label>
-        <input type="time" id="time" placeholder="eg:12:00" />
-        <button id="submit-btn">start</button>
+
+        <div class="clock-column">
+          <p class="clock-hours clock-timer" id="hours"></p>
+          <p class="clock-label">Hours</p>
+        </div>
+
+        <div class="clock-column">
+          <p class="clock-minutes clock-timer" id="minutes"></p>
+          <p class="clock-label">Minutes</p>
+        </div>
+
+        <div class="clock-column">
+          <p class="clock-seconds clock-timer" id="seconds"></p>
+          <p class="clock-label">Seconds</p>
+        </div>
       </div>
     </div>
     <script src="script.js"></script>
