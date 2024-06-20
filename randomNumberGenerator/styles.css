@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+body{
+    font-family: "Courier Prime", monospace;
+    background-color: #abbaab;
+    }
+.container{
+    position: absolute;
+    width: 100%;
+    height: 757px;
+    background: linear-gradient(90deg, #fff, #abbaab);
+    overflow: hidden;
+}
+.instructions{
+    font-size: 32px;
+    text-align: center;
+    font-weight: 700;
+    text-shadow: 2px 2px #4169e1;
+    border-style: dashed;
+}
+.instructions, .range{
+    margin: auto;
+    padding: 44px 0;
+}
+.max-div, .min-div, .range, h2{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.range h2{
+    text-shadow: 2px 2px #4169e1;
+}
+#min-input, #max-input {
+    margin: 15px;
+    font-family: Courier Prime, monospace;
+    font-weight: 700;
+    text-align: center;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
+    width: 84px;
+    height: 37px;
+}
+.max-div, .min-div{
+    margin: 17px auto;
+}
+.generate-box{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding: 20px 0;
+}
+.gen-btn{
+    padding:20px 40px;
+    font-size: 40px;
+    transition-duration: .4s;
+    border-radius: 12px;
+}
+.result{
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+}
+.result h1{
+    font-size: 4em;
+    margin: 0;
+    border-style: groove;
+    border-color: #4169e1;
+    text-shadow: 2px 2px #4169e1;
+}
+.gen-btn:hover{
+    background-color: rgb(8, 94, 94);
+}
+
+
+
+
+
+
+

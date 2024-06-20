@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Random Number Generator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="instructions">
+        <p>
+          Set a range for minimum & maximum number value.
+          <br />
+          Then click "generate" to recieve a random number.
+        </p>
+      </div>
+      <div class="range">
+        <div class="min-div">
+          <h2>Minimum</h2>
+          <input
+            type="number"
+            min="0"
+            max="infinity"
+            required
+            value="0"
+            id="min-input"
+          />
+        </div>
+        <div class="max-div">
+          <h2>Maximum</h2>
+          <input
+            type="number"
+            min="1"
+            max="infinity"
+            required
+            value="100"
+            id="max-input"
+          />
+        </div>
+      </div>
+      <div class="generate-box">
+        <button type="button" class="gen-btn">generate</button>
+      </div>
+      <div class="result">
+        <h1>0</h1>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
