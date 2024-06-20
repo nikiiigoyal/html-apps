@@ -16,3 +16,9 @@ Checks if the answer is correct and updates score.
 Moves to the next question (if there is one).
 If no more questions:
 Displays the final score and a reload button.
+
+javascript projects
+-countdwon timer
+-rock paper scissor
+-decimal to binary number
+-binary to decimal number

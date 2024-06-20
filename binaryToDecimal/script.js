@@ -18,7 +18,7 @@ function binarytoDecimal(binaryInput) {
       }
     }
   
-    result.textContent = errorMessage ? errorMessage : `${binaryInput} (binary) is equal to ${decimal} (decimal)`;
+    result.textContent = errorMessage ? errorMessage : `${binaryInput} (binary no.) is equal to ${decimal} (decimal no.)`;
   }
   
   convertBtn.addEventListener("click", () => {
