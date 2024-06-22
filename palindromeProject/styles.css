@@ -74,3 +74,15 @@ label{
     border-radius: 20px;
     margin: 51px auto;
 }
+.results-div {
+    overflow-y: auto;
+    word-wrap: break-word;
+    min-height: 59px;
+    color: black;
+    font-size: 18px;
+    font-family: monospace;
+  }
+  
+  /* .hidden {
+    display: none;
+  } */
