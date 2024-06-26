@@ -20,27 +20,20 @@ body{
     margin-top: 40px;
 }
 h1{
+  font-family: "Poppins", sans-serif;
   text-align: center;
     font-size: 43px;
     font-weight: normal;
     margin-bottom: 23px;
+    word-spacing: 4px;
 }
-button {
-    color:  #333;
-    background:  #ddd;
-    border: 1px solid  #ddd;
-    padding: 0.5rem 1rem;
-    font-weight: bold;
-    margin: 0.5rem 0;
-    outline: none;
-    cursor: pointer;
-    width: 100%;
-  }
-  button:hover {
-    background-color:  #61bfad;;
-    border: 1px solid  #61bfad;;
-    color: white;
-  }
+.wordchar {
+  text-align: center;
+  padding: 14px;
+  background-color: cadetblue;
+  font-size: 18px;
+}
+
   textarea {
     color:  #333;
     border: 1px solid  #ddd;
@@ -55,4 +48,3 @@ button {
     border: 1px solid  #61bfad;;
     color:  #61bfad;
   }
-  
