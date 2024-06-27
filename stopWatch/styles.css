@@ -9,8 +9,10 @@ body{
 .container{
     text-align: center;
     margin-top: 233px;
+    max-width: 1300px;
+    
 }
-#time{
+#time {
     width: 56%;
     height: 20vh;
     margin: auto;
