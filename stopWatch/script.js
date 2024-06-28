@@ -1,6 +1,6 @@
 
 let displayTime = document.querySelector("#time")
-const timer = null;
+let timer = null;
 const startBtn = document.querySelector("#start")
 const stopBtn = document.querySelector("#stop")
 const resetBtn = document.querySelector("#reset")
@@ -23,22 +23,21 @@ function stopWatchTime () {
     let s = seconds < 10 ? "0" + seconds: seconds;
     displayTime.innerHTML = h + ":"+ m +":"+ s
 }
-function watchStart() {
- if(timer!= null) {
+startBtn.addEventListener("click", function() {
+    if(timer!= null) {
+        clearInterval(timer)
+     }
+     timer = setInterval(stopWatchTime, 1000)
+    }
+)
+  
+stopBtn.addEventListener("click", function() {
     clearInterval(timer)
- }
- timer = setInterval(stopWatchTime, 1000)
-}
-function watchStop() {
-    clearInterval(timer)
-}
-function watchReset() {
-    clearInterval(timer)
-    [hours ,minutes, seconds] =[0, 0, 0];
-    displayTime.innerHTML = "00:00:00"
+})
+resetBtn.addEventListener("click", function() {
+    clearInterval(timer) 
+    displayTime.innerHTML = `00:00:00`
+    hours = minutes = seconds = 0;
 
-}
-startBtn.addEventListener("click", watchStart)
-stopBtn.addEventListener("click", watchStop)
-resetBtn.addEventListener("click", watchReset)
+})
 

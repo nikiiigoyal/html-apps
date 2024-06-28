@@ -21,6 +21,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    font-size: 102px;
 }
 .digit{
     font-size: 8rem;
