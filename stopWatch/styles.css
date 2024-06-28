@@ -22,6 +22,7 @@ body{
     flex-direction: row;
     justify-content: space-around;
     font-size: 102px;
+    align-items: center;
 }
 .digit{
     font-size: 8rem;
@@ -50,6 +51,11 @@ body{
     margin-right: 25px;
     border-radius: 11px;
     border: none;
+    transition: 1s;
+}
+.btn:hover{
+    background-color: #85B4F5;
+    font-size: 31px;
 }
 #buttons{
    margin-top: 21px;

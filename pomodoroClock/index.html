@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <title>pomodoro clock</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="app">
+        <div>
+          <div class="main-title">25 + 5 Clock</div>
+          <div class="length-control">
+            <div id="break-label">Break-length</div>
+            <button class="btn-level" id="break-decrement" value="-">
+              <span class="material-symbols-outlined"> arrow_downward </span>
+            </button>
+            <div class="btn-level" id="break-length">5</div>
+
+            <button class="btn-level" id="break-increment" value="+">
+              <span class="material-symbols-outlined"> arrow_upward </span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="length-control">
+        <div id="session-label">session length</div>
+        <button class="btn-level" id="session-decrement" value="-">
+          <span class="material-symbols-outlined"> arrow_downward </span>
+        </button>
+        <div class="btn-level" id="session-length">25</div>
+        <button class="btn-level" id="session-increment" value="+">
+          <span class="material-symbols-outlined"> arrow_upward </span>
+        </button>
+      </div>
+      <div class="timer">
+        <div class="timer-wrapper">
+          <div>
+            <div id="timer-label">Session</div>
+            <div id="time-left">25:00</div>
+          </div>
+        </div>
+        <div class="time-control">
+          <button id="start-stop">
+            <span class="material-symbols-outlined"> play_pause </span>
+          </button>
+          <button id="reset">
+            <span class="material-symbols-outlined"> restart_alt </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
