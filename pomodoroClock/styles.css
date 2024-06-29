@@ -66,6 +66,9 @@ button {
     top: 155px;
     left: 90px;
       }
+    #break-left{
+        display: none;
+    }
     
   
 
