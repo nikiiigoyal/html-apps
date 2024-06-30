@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+body{
+    background-color: azure;
+    animation-name: colorchanger;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    
+}
+@keyframes colorchanger  {
+    0%{background-color: blueviolet;}
+    10%{background-color: #FF5733;}
+    20%{background-color: rgb(172, 154, 18);}
+    30%{background-color: #bc2e0e;}
+    40%{background-color: rgb(66, 6, 121);}
+    50%{background-color: #541305;}
+    60%{background-color: rgb(49, 89, 131);}
+    70%{background-color: #FF5733;}
+    80%{background-color: rgb(160, 9, 84);}
+    90%{background-color: #bb517f;}
+    100%{background-color: rgb(97, 111, 93);}
+
+   
+}
+h1{
+    font-family: "Ubuntu", sans-serif;
+    TEXT-ALIGN: center;
+    font-size: 4rem;
+    margin-top: 70px;
+    letter-spacing: 6px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
