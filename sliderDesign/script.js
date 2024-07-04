@@ -32,3 +32,4 @@ previousButton.addEventListener("click",function() {
   slideshow(currentSlide);
 })
 
+
