@@ -1,31 +1,58 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
+:root {
+    --gray-00: #ffffff;
+    --gray-05: #f5f6f7;
+    --gray-15: #d0d0d5;
+    --gray-75: #3b3b4f;
+    --gray-85: #1b1b32;
+    --gray-90: #0a0a23;
+    --blue-50: #198eee;
+    --error: #a94442;
+    --danger-color: #850000;
+    --danger-background: #ffadad;
+  }
+  
+  *,
+  ::before,
+  ::after {
     padding: 0;
-}
-main{
-    background: #1B1B32;
-    color: #fff;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    min-height: 100vh;
+    padding: 50px 20px;
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    background-color: var(--gray-85);
+    color: var(--gray-05);
+  }
+  
+  main {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-h1{
+    justify-content: center;
+  }
+  h1 {
     text-align: center;
     margin: 20px auto;
     max-width: 350px;
-}
-form{
-    color:  #f5f6f7;
+    font-family: 'Castoro Titling', cursive;
+  }
+  
+  form {
+    color: var(--gray-05);
     margin: auto 25px;
-    padding: 120px;
-    border: 3px solid  #f5f6f7;
+    padding: 15px auto;
+    border: 3px solid var(--gray-05);
     text-align: center;
     width: 90%;
     max-width: 500px;
-    background-color: #3b3b4f;
-}
-fieldset {
+    background-color: var(--gray-75);
+  }
+  
+  fieldset {
     border: 0 none;
     height: 100%;
     padding: 25px;
@@ -38,6 +65,12 @@ fieldset {
     margin-bottom: 10px;
     font-weight: bold;
   }
+  
+  input:focus-visible,
+  button:focus-visible {
+    outline: 3px solid var(--blue-50);
+  }
+  
   input {
     display: block;
     font-size: 2.5rem;
@@ -47,8 +80,8 @@ fieldset {
     margin: 10px 0;
     line-height: 1.4;
     color: white;
-    background-color: #0a0a23;
-    border: 1px solid #f5f6f7;
+    background-color: var(--gray-90);
+    border: 1px solid var(--gray-05);
   }
   
   button {
@@ -62,10 +95,10 @@ fieldset {
     width: 100%;
   }
   
-  #output {
+  .output {
     color: white;
-    background-color:#3b3b4f;
-    border: 3px solid #f5f6f7;
+    background-color: var(--gray-75);
+    border: 3px solid var(--gray-05);
     font-size: 2.5rem;
     width: 90%;
     max-width: 500px;
