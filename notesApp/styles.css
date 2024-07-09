@@ -25,11 +25,11 @@ body{
     overflow-y: scroll;
     border-radius: 8px;
 }
-#list-header{
+/* #list-header{
     display: flex;
     justify-content: left;
     align-items: left;
-}
+} */
 .blankdiv{
     width: 200px;
     height: 200px;
@@ -70,6 +70,7 @@ body{
     align-items: left;
     justify-content: left;
 }
+
 ul{
     list-style-type: none;
     display: flex;
@@ -143,11 +144,11 @@ li{
     box-shadow: 9px 9px 18px #b3b3b3,-9px -9px 18px #ffff;
 
 }
-li{
+/* li{
     display: none;
-}
-#editBtn,
-#deleteBtn{
+} */
+.editBtn,
+.deleteBtn{
     background-color: #c6aaff;
     color: #fff;
     border: none;
