@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css" class="" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
@@ -11,79 +11,35 @@
     <title>Notes App</title>
   </head>
   <body>
-    <div class="container">
-      <div class="content-box">
-        <header>
-          <div class="arrow">
-            <button>
-              <span class="material-symbols-outlined arrow-back">
-                arrow_back
-              </span>
-            </button>
-          </div>
-          <div class="heading-text">
-            <h2>Laundry</h2>
-            <p>Last updated at 14:30</p>
-          </div>
-          <div class="btns">
-            <button>
-              <span class="material-symbols-outlined btn-icon">
-                border_color
-              </span>
-            </button>
-            <button>
-              <span class="material-symbols-outlined btn-icon"> close </span>
-            </button>
-          </div>
-        </header>
-        <div class="contents">
-          <label>
-            <input type="checkbox" class="checkbox" checked />
-            Detergent
-          </label>
-          <label
-            ><input type="checkbox" class="checkbox" checked />Tipods</label
-          >
-          <label>
-            <input type="checkbox" class="checkbox" checked />
-            Shirts</label
-          >
-          <label><input type="checkbox" class="checkbox" checked />Pants</label>
-          <label
-            ><input type="checkbox" class="checkbox" checked /> Socks</label
-          >
-          <label
-            ><input type="checkbox" class="checkbox" checked /> Bedsheets</label
-          >
-          <label><input type="checkbox" class="checkbox" /> carpets</label>
-          <label>
-            <input type="checkbox" class="checkbox" checked />
-            Detergent
-          </label>
-          <label
-            ><input type="checkbox" class="checkbox" checked />Tipods</label
-          >
-          <label>
-            <input type="checkbox" class="checkbox" checked />
-            Shirts</label
-          >
-          <label><input type="checkbox" class="checkbox" checked />Pants</label>
-          <label
-            ><input type="checkbox" class="checkbox" checked /> Socks</label
-          >
-          <label
-            ><input type="checkbox" class="checkbox" checked /> Bedsheets</label
-          >
-          <label><input type="checkbox" class="checkbox" /> carpets</label>
-          <label
-            ><input type="checkbox" class="checkbox" checked /> Socks</label
-          >
-          <label
-            ><input type="checkbox" class="checkbox" checked /> Bedsheets</label
-          >
-          <label><input type="checkbox" class="checkbox" /> carpets</label>
+    <div id="container" class="container">
+      <div id="list-header">
+        <div id="add-notes-div" class="addnotes">
+          <span class="material-symbols-outlined"> add </span>
         </div>
+        <div class="blankdiv"></div>
+        <div class="blankdiv"></div>
+      </div>
+      <div id="list-conatiner">
+        <ul id="notes-list">
+          <li class="note" data-text="This is a note">
+            This is a note
+            <button class="edit" id="editBtn">Edit</button>
+            <button class="delete" id="deleteBtn">Delete</button>
+          </li>
+        </ul>
+      </div>
+
+      <div id="popup-container" class="popupcontainer hidden">
+        <h1 class="title">NEW Note</h1>
+        <textarea
+          id="new-note"
+          placeholder="Enter your note here..."
+        ></textarea>
+        <button id="save-note" class="saveBtn">Save</button>
+        <button id="cancel-note" class="cancelBtn">Cancel</button>
       </div>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>

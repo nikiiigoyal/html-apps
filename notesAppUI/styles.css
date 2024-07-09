@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+    font-family: "Poppins", sans-serif;
+  
+}
+.container{
+    background-color: #FDF2BB;
+    background-color: #FDF2BB;
+    width: 100%;
+    height: 552px;
+    margin: auto;
+    display: flex;
+    max-width: 596px;
+}
+.content-box{
+    background-color: #ffff;
+    width: 40%;
+    height: 64%;
+    margin: auto;
+    position: relative;
+    padding: 10px;
+    
+}
+header{
+    display: flex;
+    justify-content: space-between;
+}
+h2{
+    color: #AD942F;
+    font-size: 14px;
+}
+p{
+    font-size: 9px;
+    font-weight: 300;
+}
+.heading-text{
+    padding-right: 88px;
+    padding-top: 15px;
+}
+button .btn-icon{
+    font-size: 15px;
+    color: #AD942F;
+    padding: 10px;
+}
+ .btns button {
+    border: none;
+    background: none;
+    }
+.btns{
+    display: flex;
+    align-items: center;
+}
+.arrow button {
+    position: absolute;
+    top: -9px;
+    border: 6px solid black;
+    background: black;
+    color: #ffff;
+    left: -24px;
+    padding: 0 3px;
+    
+}
+.arrow .arrow-back{
+    font-size: 17px;
+}
+.contents{
+    
+    max-height: 225px;
+    gap: 17px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* width: 193px; */
+    margin-top: 37px;
+    padding: 0px 50px;
+    color: #AD942F;
+    font-size: 11px;
+    overflow: auto;
+    
+    
+}
+.contents.checkbox{
+    border:1px solid #AD942F;
+}
+/* width */
+.contents::-webkit-scrollbar {
+    width: 5px;
+    background-color: #D9D9D9;
+}
+
+/* Track */
+.contents::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 3px #373737; 
+  border-radius: 5px;
+}
+ 
+/* Handle */
+.contents::-webkit-scrollbar-thumb {
+  background: black; 
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+.contents::-webkit-scrollbar-thumb:hover {
+  background: grey; 
+}
