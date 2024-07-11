@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color:#2E2E2E;;
+    color: #fff;
+    max-width: 100vw;
+}
+/* aligning the main box ,bringing it at the center */
+.align{
+  max-width: 800px;
+  margin: auto;
+  background-color: black;
+ margin-top: 75px;
+ margin-left: 321px; 
+ padding-bottom: 69px      
+
+
+}
+.gradient-text {
+ background-image: linear-gradient(to right, #E94BBB 0%, #8E6CD7 50%, #5D83F0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  padding-top: 60px;
+  /* margin-right: 339px; */
+  padding-bottom: 30px;
+  margin-left: 69px;
+    
+  }
+  /*section{
+    display: flex;
+    flex-direction: column;
+  }*/
+  /* header{
+    display: flex;
+    align-items: center;
+    flex-direction: column
+    ; */
+  
+  header p{
+    margin-top: 12px;
+    letter-spacing: 0.1em;
+    font-size: 15px;
+  }
+  header button{
+    background-color: black;
+    padding: 11px 25px;
+    border-radius: 7px;
+    color: #fff;
+    border: none;
+  }
+  /*designing task bar*/
+ .tasks{
+  display: flex;
+    justify-content: space-between;
+    /* border: 2px solid grey; */
+    padding: 12px 48px;
+    border-radius: 17px;
+    background-color: #2E2E2E;
+    margin: 0 75px;
+    margin-right: 145px;
+  }
+  .icons{
+    display: flex;
+  }
+  
+  .list-item{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    margin-top: 53px;
+    margin-right: -58px;
+    padding: 5px 12px;
+    padding-left: 70px;
+  }
+  /*design to icon*/
+  .schedule{
+    margin-right: 13px;
+   /* border: 1px solid grey; */
+    padding: 8px 9px;
+    border-radius: 7px;
+    margin-left: 184px;
+    /* margin-top: 3px; */
+    background-color: black;
+}
+.taskNames{
+  max-width: 600px;
+}
+.list-left{
+  display: flex;
+  gap: 33px;
+}
+.list-right{
+  display: flex;
+    flex-direction: row-reverse;
+    font-size: 19px;
+    line-height: 34px;
+    gap: 7px;
+}
+.circle{
+  color: #316E4D;
+  font-size: 35px;
+}
+/* desin on text  */
+.text{
+  font-size: 23px;
+    letter-spacing: 1px;
+
+}
+.delete{
+  color: #592727;
+}

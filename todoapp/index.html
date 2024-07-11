@@ -3,113 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <title>TODO App</title>
+    <link rel="stylesheet" href="styles.css" class="" />
+    <title>Todo App</title>
   </head>
   <body>
-    <div class="align">
-      <header>
-        <h1 class="gradient-text">TODO app</h1>
-        <div class="tasks">
-          <p>Task name</p>
-          <div class="icons">
-            <span class="material-symbols-outlined schedule"> schedule </span>
-            <button>Add</button>
-          </div>
-        </div>
-      </header>
-      <div class="taskNames">
-      <ul class="list-item">
-        <div class="list-left">
-          <li>
-            <span class="material-symbols-outlined circle">
-              check_circle</span>
-              <li class="text">Drink Water</li>
-          </li>
-        </div>
-        <div class="list-right">
-          <li>
-            <span class="material-symbols-outlined delete"> delete </span>
-          </li>
-          <li>7:55 PM</li>
-        </div>
-      </ul>
-      <ul class="list-item">
-        <div class="list-left">
-          <li>
-            <span class="material-symbols-outlined circle">
-              radio_button_unchecked</span
-            >
-          </li>
-          <li class="text">Go To Walk</li>
-        </div>
-        <div class="list-right">
-          <li>
-            <span class="material-symbols-outlined delete"> delete </span>
-          </li>
-          <li>8:00 PM</li>
-        </div>
-      </ul>
-      <ul class="list-item last">
-        <div class="list-left">
-          <li>
-            <span class="material-symbols-outlined circle">
-              radio_button_unchecked</span
-            >
-          </li>
-          <li class="text">Write an Email</li>
-        </div>
-        <div class="list-right">
-          <li>
-            <span class="material-symbols-outlined delete"> delete </span>
-          </li>
-          <li>8:37 PM</li>
-        </div>
-        </ul>
-    </div>
-    </div>
+    <h1>todos</h1>
+    <form action="#" class="form">
+      <input
+        type="text"
+        class="input"
+        id="input"
+        placeholder="Enter your todo"
+      />
+    </form>
+
+    <ul class="todos"></ul>
+
+    <p>
+      Left click to toggle completed.
+      <br />
+      Right click to delete todo
+    </p>
+    <script src="script.js"></script>
   </body>
 </html>
-
-<!-- <div class="container">
-          <div class="water">
-            <span class="material-symbols-outlined circle"> check_circle</span>
-            <p>Drink water</p>
-
-            <span class="time"
-              >7:55 PM
-              <span class="material-symbols-outlined delete">
-                delete
-              </span></span
-            >
-          </div>
-          <div class="walk">
-            <span class="material-symbols-outlined circle">
-              radio_button_unchecked</span
-            >
-            <p>Go to walk</p>
-
-            <span
-              >8:00 PM
-              <span class="material-symbols-outlined delete">
-                delete
-              </span></span
-            >
-          </div>
-          <div class="email">
-            <span class="material-symbols-outlined circle">
-              radio_button_unchecked
-            </span>
-            <p>Write an email</p>
-            <span
-              >8:40 PM
-              <span class="material-symbols-outlined delete">
-                delete
-              </span></span
-            >
-          </div>
-        </div> -->
