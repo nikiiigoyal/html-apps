@@ -651,7 +651,7 @@ html{
 }
 /* footer */
 
-.footer{
+/* .footer{
   background-color: #111;
   color: var(--clr-accent);
   text-align: center;
@@ -664,7 +664,7 @@ html{
   font-size: xx-large;
   text-align: center;
   align-items: flex-start;
-}
+} */
 
 .footer a {
   color: inherit;
@@ -672,9 +672,9 @@ html{
 
 }
 
-.footer__link{
+/* .footer__link{
   font-weight: var(--fw-bold);
-}
+} */
 
 .footer__link:hover,
 .social-list__link:hover{
@@ -701,3 +701,20 @@ html{
 .social-list__link{
   padding: 0.5em;
 }
+.footer-body{
+  width: 100%;
+  display: flex;
+    justify-content: center;
+    align-items: baseline;
+    font-size: 23px;
+    background-color: #563841;
+}
+
+.social-list__item i{
+  color: #d92761;
+}
+
+.mail a {
+  color: #e53a6d;
+}
+
