@@ -45,7 +45,7 @@ for (let i = 0; i <= 10; i++) {
 }
 
 // Using loop print the following pattern
-console.log("i\ti^2\ti^3"); // Print the table header
+console.log("i i^2 i^3"); // Print the table header
 for (let i = 0; i <= 10; i++) {
   let result = i * i * i;
   console.log(`${i} * ${i} * ${i}= ${result}`);
@@ -63,20 +63,24 @@ for (let i = 0; i <= 100; i++) {
 
 for (let i = 0; i <= 100; i++) {
   if (i % 2 !== 0) {
-    console.log(`${i} is a odd number`);
+    console.log();
   }
 }
 
 // Use for loop to iterate from 0 to 100 and print only prime numbers (A prime number can only be divided evenly (with no remainder) by 1 and itself.)
-// let count = 0;
-// // for (let i = 0; i <= 100; i++) {
-//   for(let j = 1; j < i; j++ ) {
-//     if(j%i === 0) {
-//         count++
-//     }
-//     console.log(`${i} is a prime number`);
-//   }
-// }
+
+let count = 0;
+for (let i = 2; i <= 100; i++) {
+  let isPrime = true;
+  for (let j = 2; j < i; j++) {
+    if (j % i === 0) {
+      isPrime = false;
+      break;
+    }
+    if (isPrime) count++;
+    console.log(count);
+  }
+}
 
 // Use for loop to iterate from 0 to 100 and print the sum of all numbers.
 let sum = 0;
@@ -133,6 +137,7 @@ console.log(`#${hexadecimal}`);
 const red = Math.floor(Math.random() * 256);
 const green = Math.floor(Math.random() * 256);
 const blue = Math.floor(Math.random() * 256);
+4;
 
 // const redstring = red.toString.padStart(2, "0");
 // const greenstring = green.toString.padStart(2, "0");
@@ -141,3 +146,130 @@ const blue = Math.floor(Math.random() * 256);
 let rgbcolor = [red, green, blue];
 
 console.log(`rgb(${rgbcolor})`);
+
+//Using the above countries array, create the following new array.
+
+const countries = [
+  "Albania",
+  "Bolivia",
+  "Canada",
+  "Denmark",
+  "Ethiopia",
+  "Finland",
+  "Germany",
+  "Hungary",
+  "Ireland",
+  "Japan",
+  "Kenya",
+];
+
+// const newCountriesArr = [];
+// const countriesLength = [];
+// for (let i = 0; i < countries.length; i++) {
+//   const countryLength = countries[i].length;
+//   countriesLength.push(countryLength);
+//   newCountriesArr.push(countries[i].toUpperCase());
+// }
+// 6
+const formattedCountriesArray = [];
+for (let i = 0; i < countries.length; i++) {
+  const country = countries[i];
+  const firstThreeChars = country.slice(0, 3);
+  const charsToUpperCase = firstThreeChars.toUpperCase();
+  const countryLength = country.length;
+  formattedCountriesArray.push([country, charsToUpperCase, countryLength]);
+}
+console.log(formattedCountriesArray);
+
+// In above countries array, check if there is a country or countries containing the word 'land'. If there are countries containing 'land', print it as array. If there is no country containing the word 'land', print 'All these countries are without land'.
+
+const countriesWithLAnd = [];
+for (let i = 0; i < countries.length; i++) {
+  const country = countries[i];
+  if (country.includes("land")) {
+    countriesWithLAnd.push(country);
+  }
+}
+if (countriesWithLAnd.length > 0) {
+  console.log(countriesWithLAnd);
+} else {
+  console.log("All these countries are without land");
+}
+
+// In above countries array, check if there is a country or countries end with a substring 'ia'. If there are countries end with, print it as array. If there is no country containing the word 'ai', print 'These are countries ends without ia'.
+
+const countriesWithSubString = [];
+for (let i = 0; i < countries.length; i++) {
+  const country = countries[i];
+  if (country.includes("ia")) {
+    countriesWithSubString.push(country);
+  }
+}
+if (countriesWithSubString.length > 0) {
+  console.log(countriesWithSubString);
+} else {
+  console.log("These are countries ends without ia");
+}
+
+// Using the above countries array, find the country containing the biggest number of characters.
+
+let longestCountry = countries[0]; //assuming first country is longest
+for (let i = 0; i < countries.length; i++) {
+  const currentCountry = countries[i];
+  if (currentCountry.length > longestCountry.length) {
+    longestCountry = currentCountry;
+  }
+}
+console.log(longestCountry);
+
+// Using the above countries array, find the country containing only 5 characters.
+let fiveCharsCOmpany;
+
+for (let i = 0; i < countries.length; i++) {
+  const currentCountry = countries[i];
+  if (currentCountry.length === 5) {
+    fiveCharsCOmpany = currentCountry;
+  }
+}
+console.log(fiveCharsCOmpany);
+
+// Find the longest word in the webTechs array
+const webTechs = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "React",
+  "Redux",
+  "Node",
+  "MongoDB",
+];
+
+let longestTech = webTechs[0]; //assuming first tech is longest
+for (let i = 0; i < webTechs.length; i++) {
+  const currentTechs = webTechs[i];
+  if (currentTechs.length > longestTech.length) {
+    longestTech = currentTechs;
+  }
+}
+console.log(longestTech);
+
+// Use the webTechs array to create the following array of arrays:
+
+const formattedWebTechs = [];
+for (let i = 0; i < webTechs.length; i++) {
+  const techs = webTechs[i];
+  const techslength = techs.length;
+  formattedWebTechs.push([techs, techslength]);
+}
+console.log(formattedWebTechs);
+
+// An application created using MongoDB, Express, React and Node is called a MERN stack app. Create the acronym MERN by using the array mernStack
+
+const mernStack = ["MongoDB", "Express", "React", "Node"];
+let acronym = " ";
+for (let i = 0; i < mernStack.length; i++) {
+  const firstChar = mernStack[i][0];
+
+  acronym += firstChar;
+}
+console.log(acronym);
