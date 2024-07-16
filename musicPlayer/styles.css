@@ -146,10 +146,10 @@ body{
     margin-bottom: 13px;
     padding: 16px 144px;
     /* font-weight: bold; */
-    letter-spacing: 2px;
-    border: 1px solid #ddd;
+     letter-spacing: 2px;
+    /* border: 1px solid #ddd; */ 
     border-radius: 6px;
-    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    /* text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue; */
   }
 
   /* .songs-list li:active{
@@ -158,6 +158,9 @@ body{
   } */
    li {
     padding: 5px 0;
+   }
+   li::first-letter{
+    text-transform: uppercase;
    }
   
   .song-list li {
@@ -175,7 +178,7 @@ body{
     font-size: 20px;
     transition: all 0.3s ease-in-out;
   }
-  .songs-list:hover{
+  /* .songs-list:hover{
     /* background-color: #c88596; */
-    box-shadow: 10px 10px 5px  #c88596;
-  }
+    /* box-shadow: 10px 10px 5px  #c88596; */
+  
