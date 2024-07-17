@@ -13,10 +13,11 @@ async function generateJoke() {
   console.log(data);
 
   //   updateJoke.textContent = data.jokes[0].joke; //accesing first joke
-  if (data.jokes && data.jokes.length > 0) {
-    updateJoke.textContent = data.jokes[0].joke;
-  } else {
-    console.log("No new jokes available");
-    // Optionally display a message to the user indicating no new jokes
-  }
+  //   if (data.jokes && data.jokes.length > 0) {
+  updateJoke.textContent = data.jokes[0].joke;
+  //   } else {
+  //     alert("No new jokes available");
+  //     // Optionally display a message to the user indicating no new jokes
+  //   }
+  // }
 }

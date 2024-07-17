@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+    :root{
+   --border-color: #144fc6;
+    --fill-color: #6ab3f8;
+    --small-cup-color: rgba(255,255,255,0.9);
+    }
+body {
+    background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    display : flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    color: #FDF6F0;
+    font-weight: bold;
+    margin-bottom :10px;
+    overflow: hidden;
+    /* background-color: red ; */
+}
+h1{
+    margin: 15px 0 0;
+    font-weight: 600;
+}
+h3{
+    font-weight: 400;
+    margin: 10px 0;
+}
+.cup{
+    width: 150px;
+    height: 330px;
+    margin: auto;
+    border: 4px solid #0F044C;
+    border-radius: 0 0 40px 40px;
+    background-color: #Fff;
+    color: var(--border-color);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin-top: 27px;
+    margin-bottom: 26px;
+
+}
+.cup.cup-small.full {
+    background-color: #6ab3f8;
+    color: #fff;
+}
+.remained{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex: 1;
+    transition: 0.3s ease;
+}
+.percentage{
+    background-color: var(--fill-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 30px;
+    height: 0;
+    transition: 0.3s ease;
+}
+.remained span{
+    font-size: 20px;
+    font-weight: bold;
+}
+.remained small {
+    font-size: 12px;
+}
+.text{
+    text-align: center;
+    margin: 0 0 5px;
+    font-size: 20px;
+}
+.cups{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 280px;
+    margin: auto;
+}
+.cup.cup-small {
+    width: 50px;
+    height: 95px;
+    border-radius: 0 0 15px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 5px;
+    background-color: var(--small-cup-color);
+    transition: 0.3s ease;
+}
