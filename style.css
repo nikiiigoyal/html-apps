@@ -50,10 +50,14 @@ html{
   section{
     padding: 31px 19px;
   }
-  img{
-    /* display: block; */
-    max-width: 100%;
-    height: 313px;
+  a {
+    text-decoration: none;
+    /* color: var(--white-color); */
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   strong{
     font-size: var(--fw-bold);
@@ -65,7 +69,7 @@ html{
   }
   /* *******about me***** */
   .about-me{
-    background: #e53a6d;
+    /* background: #e53a6d; */
     /* border-radius: 8px; */
     max-width: 100vw;
     margin: 0 auto;
@@ -74,7 +78,7 @@ html{
   
   .white-div{
     background: #fff;
-    border-radius: 61pz;
+    border-radius: 61px;
     /* width: 95%; */
     /* height: 51%; */
     margin: auto;
@@ -89,18 +93,14 @@ html{
     justify-content: space-between;
     width: 100%;
     align-items: center;
-    /* margin: 0
+    margin: 0
   }
-  .about-me-image{
-    
-    /* max-width: 100%; */
-    /* height: 256px;
-    margin-top: 148px; */
-  }
+  
+  
   .header-tag:hover{
     border-bottom: 1px solid black;
   }
-  .introduction{
+  /* .introduction{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -129,18 +129,27 @@ html{
   .button-dwnld{
     background: #ef8ba8;
     /* margin: 5px; */
-    padding: 11px;
+    /* padding: 11px;
     border: none;
     border-radius: 3px;
     text-align: center;
     color: blanchedalmond;
-}
-  
+} */
+   
   li {
     display: inline;
   }
-  
-  
+  .about-me-nav-left span{
+    font-size: 27px;
+    /* color: #fff; */
+    color: black;
+    padding: 0 8px;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+  .about-me-nav-left strong{
+    color: crimson;
+  }
   
   .nav {
     margin: 0; /* Remove default margin for better styling */
@@ -167,11 +176,11 @@ html{
   
   /* buttons */
   
-  .btn{
-    display: inline-block;
+  
+    /* display: inline-block;
     padding: 0.5em 2.5em;
     /* background-color: var(--clr-dark); */
-    text-decoration: none;
+    /* text-decoration: none;
     cursor: pointer;
     font-size: .8rem;
     text-transform: uppercase;
@@ -180,11 +189,11 @@ html{
     transition: transform 200ms ease-in-out;
     background-color: var(--clr-accent);
     color: var(--clr-dark);
-  }
+  } */ */
   
-  .btn:hover{
+  /* .btn:hover{
     transform: scale(1.1);
-  }
+  } */
   
   /* Typography */
   

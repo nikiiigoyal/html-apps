@@ -5,6 +5,7 @@ const mealEl = document.querySelector(".meals");
 const singleMealEL = document.querySelector(".single-meal");
 
 const API_URL = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
+let ingredientName;
 
 searchBtnElement.addEventListener("click", function (e) {
   e.preventDefault();
@@ -72,7 +73,7 @@ async function fetchMeal(mealName) {
         liEl.classList.add("ingredient-item");
 
         const keys = Object.keys(ingredient); // ["cumin"]
-        const ingredientName = keys[0]; // 'CUMIN'
+        ingredientName = keys[0]; // 'CUMIN'
         liEl.innerHTML = `<strong>${ingredientName}</strong> - ${ingredient[ingredientName]}`;
         return liEl;
       });
@@ -91,14 +92,14 @@ async function fetchMeal(mealName) {
 
       newElement.innerHTML = `<div class="img-container"><h3 class="meal-area">${mealArea}</h3>
         <img class="meal-img" src="${mealImg}" alt="${mealTitle}"/></div>
-         <p class="meal-recipee">${mealRecipee}</P>
+         <p class="meal-recipee">${mealRecipee}</p>
        
     `;
-      //   const divElement = document.createElement("div");
-      //   divElement.classList.add("p-li-container");
+      // const divElement = document.createElement("div");
+      // divElement.classList.add("p-li-container");
 
-      //   divElement.innerHTML = ` <p class="meal-recipee">${mealRecipee}</P>
-      // <li>${}</li>`;
+      // divElement.innerHTML = ` <p class="meal-recipee">${mealRecipee}</P>
+      // <li>${listEl}</li>`;
 
       mealEl.appendChild(newElement);
       //   mealEl.appendChild(divElement);
