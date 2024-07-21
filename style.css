@@ -47,9 +47,9 @@ html{
     overflow-x: hidden;
   }
   
-  section{
+  /* section{
     padding: 31px 19px;
-  }
+  } */
   a {
     text-decoration: none;
     /* color: var(--white-color); */
@@ -93,13 +93,13 @@ html{
     justify-content: space-between;
     width: 100%;
     align-items: center;
-    margin: 0
+    margin:  0 0 43px -80px;
   }
   
   
-  .header-tag:hover{
+  /* .header-tag:hover{
     border-bottom: 1px solid black;
-  }
+  } */
   /* .introduction{
     display: flex;
     flex-direction: column;
@@ -135,6 +135,15 @@ html{
     text-align: center;
     color: blanchedalmond;
 } */
+
+.about-me-nav-left{
+  display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.about-me-nav-left div{
+  font-size: 21px;
+}
    
   li {
     display: inline;
@@ -260,7 +269,10 @@ html{
   header{
     display: flex;
     justify-content: space-between;
-    padding: 1em;
+    padding: 13px;
+    align-items: center;
+    flex-direction: row;
+
   }
   
   
