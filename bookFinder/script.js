@@ -2,6 +2,7 @@ const searchBtn = document.querySelector("#search-btn");
 const searchIcon = document.querySelector("#search-icon");
 const searchInput = document.querySelector("#search-input");
 const bookContainer = document.querySelector("#book-container");
+const searchImage = document.querySelector(".search-image");
 const booksApi = "https://www.googleapis.com/books/v1/volumes?q=search+terms";
 
 searchIcon.addEventListener("click", searchbooks);
@@ -18,6 +19,7 @@ async function searchbooks() {
     const response = await fetch(url);
     const data = await response.json();
     console.log(data);
+    searchImage.style.display = "none";
 
     const books = data.items;
 
@@ -61,7 +63,7 @@ async function searchbooks() {
       bookAuthors.classList.add("book-authors");
 
       const bookDescription = document.createElement("p");
-      bookDescription.textContent = description.slice(0, 150) + "...";
+      bookDescription.textContent = description.slice(0, 250) + "...";
       bookDescription.classList.add("book-description");
 
       bookInfo.appendChild(bookTitle);

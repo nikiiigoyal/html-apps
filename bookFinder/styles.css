@@ -42,7 +42,7 @@ section{
 }
 .content{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     /* margin: 60px 0; */
     padding-top: 3rem;
@@ -262,12 +262,16 @@ section{
 
 }
 /* search html */
+.search-main-container{
+    max-width: 90%;
+    margin: auto;
+}
 .content-top {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin: 80px;
+    margin: 35px 0px 30px -323px;
 }
 .content-top p{
     font-size: 1rem;
@@ -275,33 +279,44 @@ section{
     font-weight: 300;
     margin-bottom: 4rem;
 }
-.search-bar{
-    width: 550px;
+.search-container{
+    width: 610px;
     /* border: 1px solid black; */
-    padding: 6px;
-    border-right: 0.5px solid black;
-    border-bottom: 0.5px solid black;
+    /* padding: 6px; */
+    /* border-right: 0.5px solid black; */
+    /* border-bottom: 0.5px solid black; */
     /* border-radius: 2px; */
     box-shadow: 1px 1px #7e7e7e;
-    border-top-right-radius: 0;
-    border-bottom-right-radius:0;
-    border-top-left-radius: 2px;
-    border-bottom-left-radius: 2px;
-    border-color: #fff;
+    /* border-top-right-radius: 0; */
+    /* border-bottom-right-radius: 0; */
+    /* border-top-left-radius: 2px; */
+    /* border-bottom-left-radius: 2px; */
+    /* border-color: #fff; */
+    position: relative;
 }
 input{
     border: none;
     font-size: 1rem;
     padding: 4px;
     outline: none;
+    width: 100%;
+    padding: 10px 35px 10px 15px;
     
 }
-.search-bar span{
+.search-container span{
     margin-left: 18rem;
     color: #62add7;
     font-size: 2rem;
     font-weight: 300;
     cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    transform: translateX(-20%);
+    /* pointer-events: none; */
+  
 
 }
 .eigth{
@@ -326,18 +341,21 @@ button a {
     flex-wrap: wrap; /* Allow items to wrap if needed */
     gap: 1rem; /* Spacing between book cards */
     margin: 0 auto; /* Center the container horizontally */
-    width: 80%; /* Adjust width as needed */
+    width: 100%; /* Adjust width as needed */
+    margin: auto;
   }
   
   .book-item {
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
-    padding: 1rem;
+    padding: 8px 8px;
     display: flex;
-    width: 50%;
+    width: 45%;
     height: 50vh;
     flex-direction: row;
+    margin-right: 40px;
+    margin-bottom: 25px;
   }
   #book-container{
     display: flex;
@@ -349,11 +367,14 @@ button a {
   .book-image {
     width: 40%; /* Adjust image width */
     object-fit: cover; /* Maintain aspect ratio and crop if necessary */
+    padding: 2px;
+
   }
   
   .book-info {
     width: 60%; /* Adjust width for remaining content */
     padding-left: 1rem; /* Space between image and text */
+    overflow: hidden;
   }
   
   .book-title {
