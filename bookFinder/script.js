@@ -29,6 +29,7 @@ async function searchbooks() {
       const categories = book.volumeInfo.categories;
       // const infoLinks = book.volumeInfo.imagelinks.infolinks;
       const description = book.volumeInfo.description;
+      const lang = book.volumeInfo.language;
 
       let thumbnailUrl;
       if (book.volumeInfo.imageLinks) {
@@ -66,12 +67,22 @@ async function searchbooks() {
       bookDescription.textContent = description.slice(0, 250) + "...";
       bookDescription.classList.add("book-description");
 
+      const bookCategory = document.createElement("p");
+      bookCategory.textContent = `Category: ${categories}`;
+      bookCategory.classList.add("book-category");
+
+      const bookLang = document.createElement("p");
+      bookLang.textContent = `Language: ${lang}`;
+      bookLang.classList.add("book-lang");
+
       bookInfo.appendChild(bookTitle);
       bookInfo.appendChild(bookAuthors);
       bookInfo.appendChild(bookDescription);
+      bookInfo.appendChild(bookCategory);
 
       bookItem.appendChild(bookImage);
       bookItem.appendChild(bookInfo);
+      bookInfo.appendChild(bookLang);
 
       bookContainer.appendChild(bookItem);
     }
