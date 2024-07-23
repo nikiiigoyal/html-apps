@@ -28,6 +28,7 @@ previousBTn.addEventListener("click", previousSong);
 nextBtn.addEventListener("click", nextSong);
 audioElement.addEventListener("timeupdate", updateProgressBar);
 audioElement.addEventListener("ended", nextSong);
+songsList.addEventListener("click", handleSongClick);
 
 loadSongs(songs[songIndex]);
 
@@ -94,6 +95,20 @@ function renderSongsList() {
     const className = songs[i];
     listItem.classList.add(className);
     listItem.classList.add("song");
+    if (i === songIndex) {
+      listItem.classList.add("active");
+    }
     songsList.append(listItem);
+  }
+}
+function handleSongClick(e) {
+  if (e.target.classList.contains("song")) {
+    const clickedSong = e.target.textContent;
+    const clickedIndex = songs.indexOf(clickedSong);
+    if (clickedIndex !== -1) {
+      songIndex = clickedIndex;
+      loadSongs(songs[songIndex]);
+      playSong();
+    }
   }
 }
