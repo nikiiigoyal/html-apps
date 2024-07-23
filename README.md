@@ -73,3 +73,61 @@ This Rock Paper Scissors game is a simple, interactive web application that allo
 - 🏆 Score tracking for player and computer
 - 🔄 Reset game option
 - 💡 Results display with win/lose/draw messages
+
+🔄 Palindrome Checker
+
+## About
+
+The Palindrome Checker is a simple web application that allows users to check whether a given word, phrase, number, or sequence is a palindrome. A palindrome is a word, number, phrase, or other sequence of characters that reads the same forward and backward, disregarding spaces, punctuation, and capitalization.
+
+## Features
+
+- ✅ Check if input is a palindrome
+- 🔤 Supports words, phrases, and numbers
+- 🧹 Ignores spaces, punctuation, and capitalization
+- 📱 Responsive design for various screen sizes
+
+🔢 Decimal to Binary Converter
+
+## About
+
+The Decimal to Binary Converter is a web application that allows users to convert decimal (base-10) numbers into their binary (base-2) equivalents. This tool is useful for understanding number systems..
+
+## Features
+
+- 🔄 Convert decimal numbers to binary
+- ✅ Input validation for decimal numbers
+
+🔢 Binary to Decimal Converter
+
+## About
+
+The Decimal to Binary Converter is a web application that allows users to convert decimal (base-10) numbers into their binary (base-2) equivalents. This tool is useful for understanding number systems..
+
+## Features
+
+- 🔄 Convert binary numbers to decimal
+- ✅ Input validation for decimal numbers
+
+⏳ Countdown Timer
+
+## About
+
+The Countdown Timer is a web application that allows users to set a specific time duration and count down to zero. It's perfect for timing activities, managing work sessions, or just keeping track of time in a visually appealing way.
+
+## Features
+
+- ⏱️ Set custom countdown duration
+- ▶️ Start, pause, and reset functionality.
+- 🕰️ Display of time in hours, minutes, and seconds format
+- 💾 can set date, name of an event and time.
+
+⏱️ Stopwatch Timer
+
+## About
+
+The Stopwatch Timer is a web application that provides a precise timing tool. It allows users to measure elapsed time with start, stop, and reset functionality, making it useful for various timing needs.
+
+## Features
+
+- ▶️ Start, stop, and reset functionality

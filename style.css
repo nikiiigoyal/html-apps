@@ -67,8 +67,8 @@ html{
   }
   
   :focus{
-    outline: 3px solid var(--clr-accent);
-    outline-offset: 3px;
+    outline: 3px solid rgb(228, 110, 134);
+    outline-offset: 1px;
   }
   /* *******about me***** */
   .about-me{
@@ -177,7 +177,7 @@ html{
   .nav__link {
     padding: 10px 15px; /* Adjust padding for desired spacing */
     text-decoration: none; /* Remove underline from links */
-    color: inherit; /* Inherit color from parent element */
+    color: inherit; 
   }
   
   .nav__link:hover {
@@ -252,18 +252,18 @@ html{
   
   /* width */
   ::-webkit-scrollbar {
-    width: 20px;
+    width: 10px;
   }
   
   /* Track */
   ::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px grey;
-    border-radius: 10px;
+    border-radius: 5px;
   }
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: var(--clr-accent);
+    background:rgb(138, 68, 82);
     border-radius: 10px;
   }
   
