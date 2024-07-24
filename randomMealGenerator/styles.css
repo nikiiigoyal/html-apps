@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.text-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+p{
+    margin-bottom: 21px;
+    margin-top: 15px;
+    font-size: 27px;
+    font-weight: 300;
+}
+button{
+    color: #fff;
+    background-color: #33C3F0;
+    border-color: #33C3F0;
+    font-size: 1rem;
+    padding: 4px 19px;
+    border-radius: 3px;
+}
+h1{
+    font-weight: 500;
+}
