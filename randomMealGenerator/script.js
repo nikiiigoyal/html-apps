@@ -64,88 +64,22 @@ async function getRandomMeals() {
   <h4>Video Recipe</h4>
   <div class="video-wrapper">
   
-  <video src="https://www.youtube.com/embed/${Video.slice(
-    -11
-  )}"class="vid" controls>
-  "Your browser does not support the video tag".
-</video>
+  
+  
+  <iframe width="420" height="315" src="https://www.youtube.com/embed/${Video}"
+</iframe>
+
+
   </div>
   
   </div.`;
 
   mealContainer.innerHTML = newInnerHTML;
 
-  //   const mealDiv = document.createElement("div");
-  //   mealDiv.classList.add("meal-div");
-
-  //   const leftColumnDiv = document.createElement("div");
-  //   leftColumnDiv.classList.add("left-column");
-
-  //   const mealImage = document.createElement("img");
-  //   mealImage.src = Image;
-  //   mealImage.alt = "meal-image";
-  //   mealImage.classList.add("meal-image");
-
-  //   const mealCategory = document.createElement("h4");
-  //   mealCategory.textContent = `Category: ${Category}`;
-  //   mealCategory.classList.add("meal-category");
-
-  //   const mealArea = document.createElement("h4");
-  //   mealArea.textContent = `Area: ${Area}`;
-  //   mealArea.classList.add("meal-area");
-
-  //   const ingredientHeading = document.createElement("h5");
-  //   ingredientHeading.textContent = "Ingredients";
-  //   const ingredients = document.createElement("ul");
-  //   const li = document.createElement("li");
-  //   ingredients.appendChild(li);
-  //   li.textContent = ingredientsWithMeasure;
-  //   ingredients.classList.add("ingredients");
-  //   ingredientHeading.appendChild(ingredients);
-
-  //   // const ingredientsString = ingredientsWithMeasure
-  //   //   .map((item) => `${item.measure} ${item.ingredient}`)
-  //   //   .join(", ");
-
-  //   // const ingredientsElement = document.createElement("p");
-  //   // ingredientsElement.textContent = ingredientsString;
-
-  //   // ingredients.appendChild(ingredientsElement);
-
-  //   const rightColumnDiv = document.createElement("div");
-  //   rightColumnDiv.classList.add("right-column");
-
-  //   const mealTags = document.createElement("h4");
-  //   mealTags.textContent = Tags;
-  //   mealTags.classList.add("meal-tags");
-
-  //   const mealInstructions = document.createElement("p");
-  //   mealInstructions.textContent = Instruction;
-  //   mealInstructions.classList.add("instruction");
-
-  //   const videoDiv = document.createElement("div");
-  //   const vid = document.createElement("video");
-  //   vid.src = Video;
-  //   vid.alt = "video of a meal";
-  //   vid.classList.add("video");
-
-  //   videoDiv.appendChild(vid);
-
-  //   rightColumnDiv.appendChild(mealTags);
-  //   rightColumnDiv.appendChild(mealInstructions);
-
-  //   leftColumnDiv.appendChild(ingredientHeading);
-
-  //   leftColumnDiv.appendChild(ingredients);
-
-  //   leftColumnDiv.appendChild(mealImage);
-  //   leftColumnDiv.appendChild(mealCategory);
-  //   leftColumnDiv.appendChild(mealArea);
-  //   leftColumnDiv.appendChild(ingredientHeading);
-
-  //   mealDiv.appendChild(rightColumnDiv);
-  //   mealDiv.appendChild(videoDiv);
-  //   mealDiv.appendChild(leftColumnDiv);
-  //   mealContainer.appendChild(mealDiv);
-  // }
+  if (Tags === null) {
+    ("no Tags");
+  }
+  if (Video) {
+    mealContainer.innerHTML = newInnerHTML.replace("${Video}", Video);
+  }
 }
