@@ -40,7 +40,7 @@ async function getRandomMeals() {
     console.log(ingredientsWithMeasure);
   }
 
-  const newInnerHTML = `<div class="row">
+  const newInnerHTML = `<div class="rows">
   <div class= "columns five">
   <img src = ${Image} alt="meal image">
   <p> Category: ${Category}</p>
@@ -57,19 +57,19 @@ async function getRandomMeals() {
    <h4>${title}</h4>
    <p>${Instruction}</p>
   </div>
-  
   </div>
+  
+  
   <div class="row">
   <h4>Video Recipe</h4>
   <div class="video-wrapper">
   
   <video width="320" height="240" src="${Video}" controls>
-  <source src="${Video}">
-   
-    Your browser does not support the video tag.
+  "Your browser does not support the video tag".
 </video>
   </div>
-  </div>`;
+  
+  </div.`;
 
   mealContainer.innerHTML = newInnerHTML;
 
