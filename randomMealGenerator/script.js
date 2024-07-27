@@ -46,7 +46,7 @@ async function getRandomMeals() {
   <p> Category: ${Category}</p>
   <p> Area: ${Area}</p>
   <p> Tags: ${Tags}</p>
-  <h4>Ingredients</h4>
+  <h4 class="ingre-title">Ingredients</h4>
   <ul>
   ${ingredientsWithMeasure
     .map((ingredient) => `<li>${ingredient}</li>`)
@@ -64,7 +64,9 @@ async function getRandomMeals() {
   <h4>Video Recipe</h4>
   <div class="video-wrapper">
   
-  <video width="320" height="240" src="${Video}" controls>
+  <video src="https://www.youtube.com/embed/${Video.slice(
+    -11
+  )}"class="vid" controls>
   "Your browser does not support the video tag".
 </video>
   </div>
