@@ -14,6 +14,7 @@ async function getRandomMeals() {
   const Category = meal.strCategory;
   const Tags = meal.strTags;
   const Video = meal.strYoutube;
+
   const Instruction = meal.strInstructions;
   const Image = meal.strMealThumb;
 
@@ -60,16 +61,16 @@ async function getRandomMeals() {
   </div>
   
   
-  <div class="row">
-  <h4>Video Recipe</h4>
+   <div class="row-video">
+ <h4>Video Recipe</h4>
   <div class="video-wrapper">
   
+     <iframe width="700" height="450" src="https://www.youtube.com/embed/${meal.strYoutube.slice(
+       -11
+     )}"
+     "frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+ </iframe>
   
-  
-  <iframe width="420" height="315" src="https://www.youtube.com/embed/${Video}"
-</iframe>
-
-
   </div>
   
   </div.`;

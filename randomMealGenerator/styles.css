@@ -50,7 +50,7 @@ h1{
 	height: 0;
     width: 100%;
     height: 100%;
-    margin: auto;
+    margin-left: 300px;
 }
 .meal{
     margin-top: 50px;
@@ -66,12 +66,12 @@ h1{
 
 .vid{
     position: absolute;
-    position: absolute;
+   
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url();
+   
 
 }
 .columns li{
@@ -82,4 +82,18 @@ h1{
     font-weight: 200;
     margin-left: -13px;
     margin-bottom: 11px;
+}
+.row-video h4{
+    font-size: 2rem;
+    /* margin: 10px; */
+    margin-top: 10px;
+    font-weight: 400;
+    /* margin-left: 155px; */
+    text-align: center;
+   
+}
+.row-video{
+    width: 60%;
+    /* margin: auto; */
+
 }
