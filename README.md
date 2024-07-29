@@ -131,3 +131,16 @@ The Stopwatch Timer is a web application that provides a precise timing tool. It
 ## Features
 
 - ▶️ Start, stop, and reset functionality
+
+🍔 Random Meal Finder
+
+## About
+
+Random Meal Finder is a fun and easy-to-use application designed to help you break free from the dinner dilemma. Tired of the same old routine? Let our app be your culinary compass! With just a click, you can discover a world of flavors and cuisines, ensuring every meal is a delightful surprise.
+
+## Features
+
+🔀 Generate random meal suggestions.
+🍽️ Explore a vast database of recipes from various cuisines.
+🚫 you will be provided with a recipe ingredients used.
+⭐ in addditional you will also be provided with a video how to cook.
