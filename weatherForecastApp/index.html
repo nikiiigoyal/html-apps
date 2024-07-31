@@ -7,27 +7,27 @@
     <title>Weather Forecast App</title>
   </head>
   <body>
-    <div class="main-container">
-      <section class="top-banner">
-        <div class="title">
-          <h1>Weather Forecast</h1>
-        </div>
+    <section class="top-banner">
+      <div class="container">
+        <h1>Weather Forecast</h1>
+
         <form>
           <input
             type="text"
             class="input-type"
             placeholder="Search for a city"
           />
-          <button class="sumit" id="submit-btn">Submit</button>
+          <button class="submit" id="submit-btn">Submit</button>
           <span class="msg" id="error-msg"></span>
         </form>
-      </section>
-      <section class="ajax-section">
-        <div class="container">
-          <ul class="cities"></ul>
-        </div>
-      </section>
-    </div>
+      </div>
+    </section>
+    <section class="ajax-section">
+      <div class="container">
+        <ul class="cities"></ul>
+      </div>
+    </section>
+
     <script src="script.js"></script>
   </body>
 </html>
