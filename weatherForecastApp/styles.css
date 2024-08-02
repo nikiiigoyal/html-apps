@@ -6,6 +6,7 @@
     --darkred: #c3112d;
     --orange:#ff8c00;
     --textDark:#1e2432;
+    --textMed:#53627c;
         
 }
 *{
@@ -29,6 +30,7 @@ input,button{
    outline: none;
    color: inherit;
 }
+
 ul{
     list-style-type: none;
 }
@@ -58,10 +60,15 @@ ul{
     height: 40px;
     padding: 8px 8px 10px;
     border-bottom: 1px solid;
+    border-radius: 5px;
+
 }
 .top-banner form input::placeholder{
     color: currentColor;
+   
+    
 }
+
 .submit{
     font-size: 1rem;
     color: var(--white);
@@ -77,3 +84,69 @@ ul{
     background-color: var(--darkred);
 }
 
+
+/* section-2 */
+
+.ajax-section{
+    margin: 70px 0 20px;
+    }
+.ajax-section .cities{
+    display: grid;
+    grid-gap: 32px 20px;
+    grid-template-columns: repeat(4,1fr);
+}
+.ajax-section li{
+    position: relative;
+    padding: 40px 10%;
+    border-radius: 20px;
+    background: var(--white);
+    color: var(--textMed);
+    box-shadow: 1px 10px;
+}
+.ajax-section .city::after {
+    content: '';
+    width: 90%;
+    height: 50px;
+    position: absolute;
+    bottom: -12px;
+    left: 5%;
+    z-index: -1;
+    opacity: 0.3;
+    border-radius: 20px;
+    background: var(--text_light);
+  }
+  
+  .ajax-section figcaption {
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 0 0 6px 0px;
+  }
+  
+  .ajax-section .city-temp {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: var(--textDark);
+  }
+  
+  
+  
+  .ajax-section .city-name {
+    padding: 0;
+    /* border-radius: 30px; */
+    /* color: var(--text_light); */
+    /* background: var(--orange); */
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    
+  }
+  
+  .ajax-section .city-icon {
+    margin-top: 13px;
+    width: 100px;
+    height: 98px;
+    font-size: 78px;
+    /* background-color: #fff; */
+    color: cadetblue;
+  }
