@@ -150,3 +150,17 @@ ul{
     /* background-color: #fff; */
     color: cadetblue;
   }
+
+  /*  */
+  #sidebar{
+ /* width: 200px; */
+  float: right;
+  padding: 10px;
+  background-color: var(--background);
+  color: var(--white);
+  position: absolute;
+    top: 56px;
+    /* left: 0; */
+    right: 15px;
+}
+  
