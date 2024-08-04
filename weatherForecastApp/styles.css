@@ -163,4 +163,21 @@ ul{
     /* left: 0; */
     right: 15px;
 }
+.recent-searches {
+    list-style-type: none;
+    margin-top: 28px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+  }
   
+  .recent-searches li {
+    margin-bottom: 10px;
+  }
+  
+  .recent-searches .city-name {
+    font-weight: bold;
+  }
+  .recent-searches .city-temp{
+    float: right;
+    font-weight: bold;
+  }

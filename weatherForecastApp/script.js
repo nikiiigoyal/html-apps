@@ -11,6 +11,7 @@ form.addEventListener("submit", function (event) {
   event.preventDefault();
   getWeatherData();
 });
+document.addEventListener("DOMContentLoaded", displayRecentSearches);
 // function to get data from Api
 async function getWeatherData() {
   const inputValue = input.value;
@@ -36,7 +37,6 @@ async function getWeatherData() {
       console.log(wind);
 
       displayWeather(inputValue, description, temperature, wind);
-      addRecentSearch(inputValue);
       displayRecentSearches();
     } catch (error) {
       console.error("Error fetching weather data:", error);
@@ -48,6 +48,8 @@ async function getWeatherData() {
 function displayWeather(city, description, temperature, wind) {
   const iconClass = getWeatherIcon(description);
   const li = document.createElement("li");
+  updateLocalStorage(city, temperature);
+  list.innerHTML = "";
   li.innerHTML = `
         <h1 class="city-name">${city}</h1>
          <div class="city-temp">${temperature}</div>
@@ -55,7 +57,6 @@ function displayWeather(city, description, temperature, wind) {
          <figcaption>${description}</figcaption>
          <div>Wind: ${wind}</div>
        `;
-
   list.appendChild(li);
 
   if (!container.contains(list)) {
@@ -85,31 +86,40 @@ function getWeatherIcon(description) {
   }
 }
 //function to get recent searches
-function getRecentSearches() {
-  return JSON.parse(localStorage.getItem("recentSearches")) || [];
-}
+// function getRecentSearches() {
+//   return JSON.parse(localStorage.getItem("recentSearches")) || [];
+// }
 
-//function to store data in a local storage
+// //function to store data in a local storage
 
-function addRecentSearch(city) {
-  let searches = JSON.parse(localStorage.getItem("recentSearches")) || [];
-  searches = searches.filter((item) => item !== city);
-  searches.unshift(city);
-  searches = searches.slice(0, 4);
-  localStorage.setItem("recentSearches", JSON.stringify(searches));
+// function addRecentSearch(city) {
+//   let searches = JSON.parse(localStorage.getItem("recentSearches")) || [];
+//   searches.push(city);
+//   searches = searches.slice(0, 3);
+//   localStorage.setItem("recentSearches", JSON.stringify(searches));
+// }
+
+function updateLocalStorage(city, weather) {
+  let cities = JSON.parse(localStorage.getItem("recentSearches")) || [];
+  cities.push({ city, weather });
+  if (cities.length > 4) {
+    let updatedData = cities.unshift();
+    localStorage.setItem("recentSearches", JSON.stringify(updatedData));
+  } else {
+    localStorage.setItem("recentSearches", JSON.stringify(cities));
+  }
 }
 //function to display recent searches
 function displayRecentSearches() {
-  const searches = getRecentSearches();
+  const searches = updateLocalStorage();
   const sideBarList = document.createElement("ul");
   sideBarList.classList.add("recent-searches");
 
-  searches.forEach((city) => {
-    const li = document.createElement("li");
-    li.innerHTML = `
-    <span class = "city-name">${city}</span>`;
-    sideBarList.appendChild(li);
-  });
+  const li = document.createElement("li");
+  li.innerHTML = `
+      <span class = "city-name">${city}<strong>${weather}</strong></span>`;
+
+  sideBarList.appendChild(li);
   sideBar.appendChild(sideBarList);
   console.log(sideBar);
 }
