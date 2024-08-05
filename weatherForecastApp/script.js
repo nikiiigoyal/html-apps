@@ -63,7 +63,6 @@ function displayWeather(city, description, temperature, wind) {
   //Store city and temperature in local storage
   const weatherData = { city, temperature };
   localStorage.setItem("weatherData", JSON.stringify(weatherData));
-
   // Retrieve stored data (for demonstration purposes)
   const storedData = JSON.parse(localStorage.getItem("weatherData"));
   console.log(storedData); // This will log the stored data object
@@ -76,7 +75,12 @@ function displayWeather(city, description, temperature, wind) {
       <span class = "city-name">${city}     <strong>${temperature}</strong></span>`;
 
   sideBarList.appendChild(li);
+  // Limit the list to 5 items
+
   sideBar.appendChild(sideBarList);
+  if (sideBar.length > 5) {
+    sideBar.pop();
+  }
   console.log(sideBar);
 }
 // function for the icons
@@ -111,6 +115,7 @@ function getWeatherIcon(description) {
 //   } else {
 //     localStorage.setItem("recentSearches", JSON.stringify(cities));
 //   }
+
 // }
 // //function to display recent searches
 // function displayRecentSearches() {

@@ -181,3 +181,6 @@ ul{
     float: right;
     font-weight: bold;
   }
+  .recent-searches strong {
+    float: right;
+  }
