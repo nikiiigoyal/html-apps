@@ -11,7 +11,7 @@ form.addEventListener("submit", function (event) {
   event.preventDefault();
   getWeatherData();
 });
-document.addEventListener("DOMContentLoaded", displayRecentSearches);
+
 // function to get data from Api
 async function getWeatherData() {
   const inputValue = input.value;
@@ -37,7 +37,6 @@ async function getWeatherData() {
       console.log(wind);
 
       displayWeather(inputValue, description, temperature, wind);
-      displayRecentSearches();
     } catch (error) {
       console.error("Error fetching weather data:", error);
       // Here you would typically show an error message to the user
@@ -47,21 +46,38 @@ async function getWeatherData() {
 // function to display the data we got
 function displayWeather(city, description, temperature, wind) {
   const iconClass = getWeatherIcon(description);
-  const li = document.createElement("li");
-  updateLocalStorage(city, temperature);
+  const listEl = document.createElement("li");
   list.innerHTML = "";
-  li.innerHTML = `
+  listEl.innerHTML = `
         <h1 class="city-name">${city}</h1>
          <div class="city-temp">${temperature}</div>
          <i class="${iconClass} city-icon"></i>
          <figcaption>${description}</figcaption>
          <div>Wind: ${wind}</div>
        `;
-  list.appendChild(li);
+  list.appendChild(listEl);
 
   if (!container.contains(list)) {
     container.appendChild(list);
   }
+  //Store city and temperature in local storage
+  const weatherData = { city, temperature };
+  localStorage.setItem("weatherData", JSON.stringify(weatherData));
+
+  // Retrieve stored data (for demonstration purposes)
+  const storedData = JSON.parse(localStorage.getItem("weatherData"));
+  console.log(storedData); // This will log the stored data object
+
+  const sideBarList = document.createElement("ul");
+  sideBarList.classList.add("recent-searches");
+
+  const li = document.createElement("li");
+  li.innerHTML = `
+      <span class = "city-name">${city}     <strong>${temperature}</strong></span>`;
+
+  sideBarList.appendChild(li);
+  sideBar.appendChild(sideBarList);
+  console.log(sideBar);
 }
 // function for the icons
 function getWeatherIcon(description) {
@@ -85,41 +101,45 @@ function getWeatherIcon(description) {
     return "fas fa-cloud-sun"; // default icon
   }
 }
-//function to get recent searches
-// function getRecentSearches() {
-//   return JSON.parse(localStorage.getItem("recentSearches")) || [];
+
+// function updateLocalStorage(city, temperature) {
+//   let cities = JSON.parse(localStorage.getItem("recentSearches")) || [];
+//   cities.push({ city, temperature });
+//   if (cities.length > 4) {
+//     let updatedData = cities.unshift();
+//     localStorage.setItem("recentSearches", JSON.stringify(updatedData));
+//   } else {
+//     localStorage.setItem("recentSearches", JSON.stringify(cities));
+//   }
+// }
+// //function to display recent searches
+// function displayRecentSearches() {
+//   const searches = updateLocalStorage();
+//   const sideBarList = document.createElement("ul");
+//   sideBarList.classList.add("recent-searches");
+
+//   const li = document.createElement("li");
+//   li.innerHTML = `
+//       <span class = "city-name">${city}<strong>${weather}</strong></span>`;
+
+//   sideBarList.appendChild(li);
+//   sideBar.appendChild(sideBarList);
+//   console.log(sideBar);
 // }
 
-// //function to store data in a local storage
-
-// function addRecentSearch(city) {
+// function updateLocalStorage(city, temperature) {
 //   let searches = JSON.parse(localStorage.getItem("recentSearches")) || [];
-//   searches.push(city);
-//   searches = searches.slice(0, 3);
+//   searches.unshift({ city, temperature }); // Add new search to the beginning
+//   searches = searches.slice(0, 4); // Keep only the last 4 searches
 //   localStorage.setItem("recentSearches", JSON.stringify(searches));
 // }
+// function displayRecentSearches() {
+//   const searches = JSON.parse(localStorage.getItem("recentSearches")) || [];
+//   const sideBar = document.querySelector("#sidebar");
 
-function updateLocalStorage(city, weather) {
-  let cities = JSON.parse(localStorage.getItem("recentSearches")) || [];
-  cities.push({ city, weather });
-  if (cities.length > 4) {
-    let updatedData = cities.unshift();
-    localStorage.setItem("recentSearches", JSON.stringify(updatedData));
-  } else {
-    localStorage.setItem("recentSearches", JSON.stringify(cities));
-  }
-}
-//function to display recent searches
-function displayRecentSearches() {
-  const searches = updateLocalStorage();
-  const sideBarList = document.createElement("ul");
-  sideBarList.classList.add("recent-searches");
+//   const searchesHTML = searches
+//     .map((search) => `<div>${search.city}: ${search.temperature}</div>`)
+//     .join("");
 
-  const li = document.createElement("li");
-  li.innerHTML = `
-      <span class = "city-name">${city}<strong>${weather}</strong></span>`;
-
-  sideBarList.appendChild(li);
-  sideBar.appendChild(sideBarList);
-  console.log(sideBar);
-}
+//   sideBar.innerHTML = "<h3>Recent Searches</h3>" + searchesHTML;
+// }
