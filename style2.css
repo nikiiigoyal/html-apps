@@ -54,7 +54,7 @@
 }
 .col-right button{
     padding: 1rem 2rem;
-    background-color: transparent;
+    /* background-color: transparent; */
     border: 2px solid crimson;
     margin: 2rem 0;
     
@@ -232,4 +232,14 @@
   }
   .projects-header strong{
     color: crimson;
+  }
+  /* modes */
+  .theme-icon {
+    width:30px;
+    cursor: pointer;
+  }
+  .nav{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
   }
