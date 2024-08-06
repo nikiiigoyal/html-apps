@@ -6,12 +6,15 @@ const container = document.querySelector("#ajax-container");
 const sideBar = document.querySelector("#sidebar");
 const weatherApi = "https://goweather.herokuapp.com/weather/Curitiba";
 
+getRecentSearches();
+
 // add event listener
 form.addEventListener("submit", function (event) {
   event.preventDefault();
   getWeatherData();
 });
 
+let recentSearches = [];
 // function to get data from Api
 async function getWeatherData() {
   const inputValue = input.value;
@@ -61,28 +64,25 @@ function displayWeather(city, description, temperature, wind) {
     container.appendChild(list);
   }
   //Store city and temperature in local storage
+  recentSearches = JSON.parse(localStorage.getItem("weatherData")) || [];
   const weatherData = { city, temperature };
-  localStorage.setItem("weatherData", JSON.stringify(weatherData));
-  // Retrieve stored data (for demonstration purposes)
-  const storedData = JSON.parse(localStorage.getItem("weatherData"));
-  console.log(storedData); // This will log the stored data object
-
-  const sideBarList = document.createElement("ul");
-  sideBarList.classList.add("recent-searches");
-
-  const li = document.createElement("li");
-  li.innerHTML = `
-      <span class = "city-name">${city}     <strong>${temperature}</strong></span>`;
-
-  sideBarList.appendChild(li);
-  // Limit the list to 5 items
-
-  sideBar.appendChild(sideBarList);
-  if (sideBar.length > 5) {
-    sideBar.pop();
+  let isCityAvailable = false;
+  for (let i = 0; i < recentSearches.length; i++) {
+    const cityName = recentSearches[i].city;
+    if (cityName !== city) {
+      isCityAvailable = true;
+    } else {
+      isCityAvailable = false;
+    }
   }
-  console.log(sideBar);
+  if (!isCityAvailable) {
+    recentSearches.push(weatherData);
+  }
+  localStorage.setItem("weatherData", JSON.stringify(recentSearches));
+  // Retrieve stored data (for demonstration purposes)
+  getRecentSearches();
 }
+
 // function for the icons
 function getWeatherIcon(description) {
   const lowercaseDesc = description.toLowerCase();
@@ -106,45 +106,19 @@ function getWeatherIcon(description) {
   }
 }
 
-// function updateLocalStorage(city, temperature) {
-//   let cities = JSON.parse(localStorage.getItem("recentSearches")) || [];
-//   cities.push({ city, temperature });
-//   if (cities.length > 4) {
-//     let updatedData = cities.unshift();
-//     localStorage.setItem("recentSearches", JSON.stringify(updatedData));
-//   } else {
-//     localStorage.setItem("recentSearches", JSON.stringify(cities));
-//   }
+function getRecentSearches() {
+  let recentSearches = JSON.parse(localStorage.getItem("weatherData")) || [];
 
-// }
-// //function to display recent searches
-// function displayRecentSearches() {
-//   const searches = updateLocalStorage();
-//   const sideBarList = document.createElement("ul");
-//   sideBarList.classList.add("recent-searches");
+  sideBar.innerHTML = "";
+  sideBar.classList.add("recent-searches");
 
-//   const li = document.createElement("li");
-//   li.innerHTML = `
-//       <span class = "city-name">${city}<strong>${weather}</strong></span>`;
-
-//   sideBarList.appendChild(li);
-//   sideBar.appendChild(sideBarList);
-//   console.log(sideBar);
-// }
-
-// function updateLocalStorage(city, temperature) {
-//   let searches = JSON.parse(localStorage.getItem("recentSearches")) || [];
-//   searches.unshift({ city, temperature }); // Add new search to the beginning
-//   searches = searches.slice(0, 4); // Keep only the last 4 searches
-//   localStorage.setItem("recentSearches", JSON.stringify(searches));
-// }
-// function displayRecentSearches() {
-//   const searches = JSON.parse(localStorage.getItem("recentSearches")) || [];
-//   const sideBar = document.querySelector("#sidebar");
-
-//   const searchesHTML = searches
-//     .map((search) => `<div>${search.city}: ${search.temperature}</div>`)
-//     .join("");
-
-//   sideBar.innerHTML = "<h3>Recent Searches</h3>" + searchesHTML;
-// }
+  for (let i = 0; i < recentSearches.length; i++) {
+    let city = recentSearches[i].city;
+    let temperature = recentSearches[i].temperature;
+    const li = document.createElement("li");
+    li.innerHTML = `
+      <span class = "city-name">${city}     <strong>${temperature}</strong></span>`;
+    console.log("li", li);
+    sideBar.appendChild(li);
+  }
+}
