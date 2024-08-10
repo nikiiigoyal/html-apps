@@ -68,14 +68,13 @@ function displayWeather(city, description, temperature, wind) {
   const weatherData = { city, temperature };
   let isCityAvailable = false;
   for (let i = 0; i < recentSearches.length; i++) {
-    const cityName = recentSearches[i].city;
-    if (cityName !== city) {
+    if (city === recentSearches[i].city) {
       isCityAvailable = true;
-    } else {
-      isCityAvailable = false;
+      return;
     }
   }
   if (!isCityAvailable) {
+    console.log("avh");
     recentSearches.push(weatherData);
   }
   localStorage.setItem("weatherData", JSON.stringify(recentSearches));
