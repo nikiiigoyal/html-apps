@@ -152,16 +152,16 @@ ul{
   }
 
   /*  */
-  sidebar{
+  .sidebar{
  /* width: 200px; */
   float: right;
   padding: 10px;
   background-color: var(--background);
   color: var(--white);
   position: absolute;
-    top: 56px;
+    top: 50px;
     /* left: 0; */
-    right: 15px;
+    right: 50px;
 }
 .recent-searches {
     list-style-type: none;
@@ -172,6 +172,7 @@ ul{
   
   .recent-searches li {
     margin-bottom: 10px;
+    color: var(--white);
   }
   
   .recent-searches .city-name {
@@ -183,4 +184,10 @@ ul{
   }
   .recent-searches strong {
     float: right;
+  }
+  .sidebar h1{
+    font-family: "Poppins", sans-serif;
+    font-weight: bolder;
+    letter-spacing: 1px;
+
   }
