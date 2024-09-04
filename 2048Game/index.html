@@ -4,49 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>2048 Game</title>
+    <title>2048</title>
 </head>
 <body>
-    <div class="main-container">
-        <div class="container">
-            <section class="para">
-                <p>Join the numbers and get to the 2048 tile!</p>
-            </section>
-            <section class="button">
-               <div class="left">
-                <div class="score"id="score">Score</div>
-                <div class="score"id="best">Best</div>>
-                </div>
-                <div class="right">
-                <button class="btn">New Game</button>           
-            </div>
-        </section>
-        <section class="tile-container">
-            <div id="game-container">
-                <div class="tile"></div>
-                <div class="tile"></div>
-                <div class="tile"></div>
-                <div class="tile"></div>
-                <div class="tile"></div>
-                <div class="tile"></div>
-                <div class="tile"></div>
-                <div class="tile"></div>
-                <div class="tile"></div>
-                <div class="tile"></div>
-                <div class="tile"></div>
-                <div class="tile"></div>
-                <div class="tile"></div>
-                <div class="tile"></div>
-                <div class="tile"></div>
-                <div class="tile"></div>
-              </div>
-        </section>
-        <section class="para">
-            <p>HOW TO PLAY: Use your arrow keys or swipe left or right, up or down to move the tiles. When two tiles with the same number touch, they merge into one. Once you get 2048 in any square, you win.</p>
-        </section>
-         </div> 
+    <div class="clear"></div>
+<div class="gameouter">
+    <div class="container">
 
+
+        <div class="heading">
+
+            <div class="main-title">Join the numbers and get to the 2048 tile!</div> 
+            <div class="newgame-score-block">
+                <div class="score-block">
+                    <div class="score-container">0</div>
+                    <div class="best-container">0</div>
+                </div>
+                <div class="restart-game-btn-block"><a class="restart-button">New Game</a></div>
+
+
+            </div>
         </div>
-    <script src="script.js"></script>
+
+
+        <div class="heading">
+            <div><p></p></div>
+
+
+            <div class="">
+                <div class="above-game"  >
+
+
+                </div>
+                <div>
+
+                </div>
+            
+            </div>
+        </div>
+
+
+        <div class="clear"></div>
+
+        <div class="game-container">
+            <div class="game-message">
+                <p></p>
+                <div class="lower">
+                    <a class="keep-playing-button">Keep going</a>
+                    <a class="retry-button">Try again</a>
+                </div>
+            </div>
+
+            <div class="grid-container">
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+            </div>
+
+            <div class="tile-container">
+
+            </div>
+        </div>
+
+        <p class="game-explanation">
+            <strong class="important">HOW TO PLAY: Use your arrow keys or swipe left or right, up or down to move the tiles. When two tiles with the same number touch, they merge into one.<span class=""> Once you get 2048 in any square, you win.</span></strong>
+        </p>
+
+    </div></div>
 </body>
 </html>
+</header>
