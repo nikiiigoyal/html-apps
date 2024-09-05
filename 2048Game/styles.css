@@ -120,12 +120,8 @@ hr {
     100% {
         opacity: 1; } }
 .container{
-    background-color: #faf8ef;
-    max-width: 750px;
-    margin: 20px auto;
-    border: 5px solid #fff;
-    padding: 10px 0;
-    width: 100%;
+    width: 500px;
+    margin: 0 auto;
 }
 .heading:after {
     content: "";
@@ -137,7 +133,36 @@ hr {
         margin: 0 auto;
     }
 }
-
+.newgame-score-block{
+    width: 100%;
+    -webkit-box-align: center !important;
+    -ms-flex-align: center !important;
+    align-items: center !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.score-block{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.restart-game-btn-block{
+    margin-left: auto
+}
+.restart-button{
+    display: inline-block;
+    background: #8f7a66;
+    border-radius: 3px;
+    padding: 10px;
+    text-decoration: none;
+    color: #f9f6f2;
+    /* height: 40px; */
+    /* line-height: 42px; */
+    display: block;
+    text-align: center;
+    /* float: right; */
+}
 .para p{
     font-size: 20px;
     font-weight: 600;
