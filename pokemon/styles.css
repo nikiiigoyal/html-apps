@@ -1,0 +1,154 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #1b1b32;
+    color: #0a0a23;
+     
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    color: #f5f6f7;
+    font-size: 1.7em;
+    text-align: center;
+    margin: 15px 0 0 0 ;
+}
+.container{
+    width: 325px;
+    margin: 59px 0;
+    background-color: #f5f6f7;
+    border: 1px solid #f5f6f7;
+    border-radius: 15px;
+    box-shadow: 10px 10px 0px 0px rgba(223, 220, 220, 0.75);
+}
+.output, #search-form{
+    display: flex;
+    justify-content: center;
+}
+#search-form {
+    flex-wrap: wrap;
+    margin: 10px 0;
+    padding: 5px;
+    border-radius: 8px 8px 0 0;
+    gap: 10px;
+  }
+  
+  label {
+    align-self: center;
+  }
+  
+  #search-input:focus-visible,
+  #search-button:focus-visible {
+    outline: 3px solid #198eee;
+  }
+  
+  #search-input {
+    height: 40px;
+    padding-left: 10px;
+    width: 200px;
+  }
+  
+  #search-button {
+    padding: 14px 0;
+    width: 80px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: #7f21ab;
+    color: #f5f6f7;
+    border: none;
+  }
+  
+  .output {
+    margin: 10px 0;
+    padding: 5px;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .top-container,
+  .bottom-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 325px;
+  }
+  
+  .top-container {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f0f1f7;
+  }
+  
+  .name-and-id {
+    height: 28px;
+    font-size: 1.1em;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+  }
+  
+  .size {
+    height: 22px;
+    font-size: 0.85rem;
+  }
+  
+  .sprite-container {
+    flex-grow: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #sprite {
+    width: 180px;
+  }
+  
+  #types {
+    min-height: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 5px;
+  }
+  
+  .type {
+    width: 66px;
+    padding: 5px;
+    font-size: 0.7rem;
+    text-align: center;
+    border-radius: 5px;
+    background-color: red;
+    text-transform: uppercase;
+  }
+  
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    font-size: 1 rem;
+    color: #f5f6f7;
+    background-color: #7f21ab;
+  }
+  
+  th:nth-child(even),
+  td:nth-child(even) {
+    border-left: 5px solid #f5f6f7;
+  }
+  
+  tr {
+    border-bottom: 5px solid #f5f6f7;
+  }
+  
+  td,
+  th {
+    text-align: center;
+    padding: 8px;
+  }
