@@ -18,9 +18,10 @@ body{
 
     background-color: #faf8ef;
     max-width: 750px;
-    margin: 20px auto;
+    /* margin: 20px auto; */
     border: 5px solid #fff;
-    padding: 40px 0;
+    /* padding: 40px 0; */
+    margin: 28px auto 23px auto;
 }
 .scores-container {
     float: right;
@@ -308,6 +309,7 @@ hr {
     align-items: center;
     font-size: 50px;
     font-weight: bold;
+    transition: all 0.15s ease-in-out;
 }
 
 .cell-2 { background-color: #eee4da; color: #776e65; }
@@ -493,3 +495,7 @@ hr {
 @media screen and (max-width: 520px) {
     .tile.tile-super .tile-inner {
         font-size: 10px; } }
+
+
+
+       
