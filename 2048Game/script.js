@@ -6,6 +6,7 @@ let gridContainer = document.querySelector(".grid-container")
 let grid = document.querySelectorAll(".grid-cell")
 
 window.addEventListener("keydown", handleKeyPress);
+let userName = ""
 let bestScore = 0
 let score = 0
 let board = [
@@ -14,6 +15,25 @@ let board = [
     [0, 0, 0, 0],
     [0, 0, 0, 0]
 ]
+//function to ask for username
+function askForUserName() {
+    userName = prompt("Please enter your Name")
+
+    //if username is invalid ask again
+    if (!userName) {
+        userName = prompt("Please enter valid user Name")
+    }
+    console.log("username",userName)
+    displayUserName();
+}
+
+//fnction to display user name
+function displayUserName() {
+    const userNameDisplay = document.createElement("div")
+    userNameDisplay.classList.add("username-display")
+    userNameDisplay.textContent = `Hello ${userName.toUpperCase()}! Join the numbers and get to the 2048 tile!`
+    document.body.prepend(userNameDisplay)
+}
 //to generate random numbers either 2 or 4
 function generateRandomNumber() {
     const numbers = [2,2,2,2,2,2,4,4,4,4]
@@ -48,6 +68,7 @@ function placeNewNumber() {
 }
 
 function initializeGame() {
+    askForUserName() //ask for usrnme
     board = [
         [0, 0, 0, 0],
         [0, 0, 0, 0],
@@ -148,6 +169,59 @@ function simpleMoveDown(board) {
     result.board = transposeBoard(result.board);
     return result;
 }
+function isGameOver() {
+    console.log("Checking for empty cells...");
+    
+    // Check if there are any empty cells
+    if (findEmptyCells().length > 0) {
+        console.log("Found empty cells, game is not over.");
+        return false;
+    }
+    
+    // Check if any adjacent cells have the same value
+    console.log("Checking for adjacent cells with the same value...");
+    for (let i = 0; i < 4; i++) {
+        for (let j = 0; j < 4; j++) {
+            let currentValue = board[i][j];
+            
+            // Check right neighbor
+            if (j < 3 && board[i][j + 1] === currentValue) {
+                console.log(`Found matching adjacent tiles at (${i}, ${j}) and (${i}, ${j+1}), game is not over.`);
+                return false;
+            }
+            
+            // Check bottom neighbor
+            if (i < 3 && board[i + 1][j] === currentValue) {
+                console.log(`Found matching adjacent tiles at (${i}, ${j}) and (${i+1}, ${j}), game is not over.`);
+                return false;
+            }
+        }
+    }
+    
+    console.log("No more moves possible, game is over.");
+    return true;
+}
+function showGameOverMessage() {
+    const gameOverDiv = document.createElement('div');
+    gameOverDiv.className = 'game-over';
+    gameOverDiv.innerHTML = `
+        <h2>Game Over!</h2>
+        <p>Your score: ${score}</p>
+        <button id="playAgainBtn">Play Again</button>
+    `;
+
+    document.body.appendChild(gameOverDiv);
+
+    // Disable further keypresses when the game is over
+    window.removeEventListener('keydown', handleKeyPress);
+    
+    document.getElementById('playAgainBtn').addEventListener('click', () => {
+        document.body.removeChild(gameOverDiv);
+        window.addEventListener('keydown', handleKeyPress);
+        initializeGame(); // Restart the game
+    });
+}
+
 
 function handleKeyPress(event) {
     let result;
@@ -172,10 +246,19 @@ function handleKeyPress(event) {
     if (result && result.moved) {
         board = result.board;
         score += result.score;
+        
         if (score > bestScore) {
             bestScore = score;
             saveBestScore()
         }
+        console.log("Checking if game is over..."); 
+        if (isGameOver()) {
+            console.log("Game is over!"); 
+            updateUI(); // Update UI one last time
+            showGameOverMessage();
+            return; // Exit the function to prevent placing a new number
+        }
+
         placeNewNumber();
         updateUI();
     }
@@ -198,4 +281,4 @@ newGame.addEventListener('click', initializeGame);
 initializeGame();
 loadBestScore()
 
-
+//
