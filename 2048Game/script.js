@@ -1,3 +1,7 @@
+const supabaseUrl = "https://oiykcudwhjapzqoqvrgo.supabase.co";  // Replace with your Supabase project URL
+const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9peWtjdWR3aGphcHpxb3F2cmdvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjY3NDM4MDAsImV4cCI6MjA0MjMxOTgwMH0.ahoH5qqveWzY1vX9zrv0M2WC9iHsD08CBdXw3ixSXdg";  // Replace with your public API key
+const supabase = supabase.createClient(supabaseUrl, supabaseKey);
+
 // DOM elements
 let scoreContainer = document.querySelector(".score-container")
 let bestContainer = document.querySelector(".best-container")
@@ -16,24 +20,24 @@ let board = [
     [0, 0, 0, 0]
 ]
 //function to ask for username
-function askForUserName() {
-    userName = prompt("Please enter your Name")
+// function askForUserName() {
+//     userName = prompt("Please enter your Name")
 
-    //if username is invalid ask again
-    if (!userName) {
-        userName = prompt("Please enter valid user Name")
-    }
-    console.log("username",userName)
-    displayUserName();
-}
+//     //if username is invalid ask again
+//     if (!userName) {
+//         userName = prompt("Please enter valid user Name")
+//     }
+//     console.log("username",userName)
+//     displayUserName();
+// }
 
-//fnction to display user name
-function displayUserName() {
-    const userNameDisplay = document.createElement("div")
-    userNameDisplay.classList.add("username-display")
-    userNameDisplay.textContent = `Hello ${userName.toUpperCase()}! Join the numbers and get to the 2048 tile!`
-    document.body.prepend(userNameDisplay)
-}
+// //fnction to display user name
+// function displayUserName() {
+//     const userNameDisplay = document.createElement("div")
+//     userNameDisplay.classList.add("username-display")
+//     userNameDisplay.textContent = `Hello ${userName.toUpperCase()}! Join the numbers and get to the 2048 tile!`
+//     document.body.prepend(userNameDisplay)
+// }
 //to generate random numbers either 2 or 4
 function generateRandomNumber() {
     const numbers = [2,2,2,2,2,2,4,4,4,4]
@@ -68,7 +72,7 @@ function placeNewNumber() {
 }
 
 function initializeGame() {
-    askForUserName() //ask for usrnme
+    // askForUserName() //ask for usrnme
     board = [
         [0, 0, 0, 0],
         [0, 0, 0, 0],
@@ -281,4 +285,3 @@ newGame.addEventListener('click', initializeGame);
 initializeGame();
 loadBestScore()
 
-//
