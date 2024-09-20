@@ -1,6 +1,63 @@
-const supabaseUrl = "https://oiykcudwhjapzqoqvrgo.supabase.co";  // Replace with your Supabase project URL
-const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9peWtjdWR3aGphcHpxb3F2cmdvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjY3NDM4MDAsImV4cCI6MjA0MjMxOTgwMH0.ahoH5qqveWzY1vX9zrv0M2WC9iHsD08CBdXw3ixSXdg";  // Replace with your public API key
-const supabase = supabase.createClient(supabaseUrl, supabaseKey);
+
+
+const supabaseUrl = "https://oiykcudwhjapzqoqvrgo.supabase.co";
+const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9peWtjdWR3aGphcHpxb3F2cmdvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjY3NDM4MDAsImV4cCI6MjA0MjMxOTgwMH0.ahoH5qqveWzY1vX9zrv0M2WC9iHsD08CBdXw3ixSXdg";
+
+const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
+console.log("Supabase client created:", supabase);
+async function askForUserName() {
+    let userName = prompt("Please enter your name");
+
+    if (!userName) {
+        userName = prompt("Please enter a valid username");
+    }
+
+    // Save username to Supabase
+    try {
+        const { data, error } = await supabase
+            .from('users')
+            .insert([{ username: userName }]);
+
+        if (error) {
+            console.error('Error inserting username:', error);
+        } else {
+            console.log('Username stored in Supabase:', data);
+        }
+    } catch (err) {
+        console.error('Supabase error:', err);
+    }
+
+    console.log("Username:", userName);
+    displayUserName();
+}
+askForUserName()
+async function loadUserName() {
+    try {
+        const { data, error } = await supabase
+            .from('users')
+            .select('username')
+            .limit(1);  // Assuming you want to retrieve the first username
+
+        if (error) {
+            console.error('Error fetching username:', error);
+        } else if (data.length > 0) {
+            userName = data[0].username;
+            console.log('Loaded username:', userName);
+            displayUserName();
+        } else {
+            askForUserName(); // If no username is stored, ask for one
+        }
+    } catch (err) {
+        console.error('Supabase error:', err);
+    }
+}
+
+function displayUserName() {
+    const userNameDisplay = document.createElement("div");
+    userNameDisplay.classList.add("username-display");
+    userNameDisplay.textContent = `Hello ${userName.toUpperCase()}! Join the numbers and get to the 2048 tile!`;
+    document.body.prepend(userNameDisplay);
+}
 
 // DOM elements
 let scoreContainer = document.querySelector(".score-container")
@@ -39,6 +96,7 @@ let board = [
 //     document.body.prepend(userNameDisplay)
 // }
 //to generate random numbers either 2 or 4
+initializeGame();
 function generateRandomNumber() {
     const numbers = [2,2,2,2,2,2,4,4,4,4]
     const randomIndex = Math.floor(Math.random() * numbers.length)
@@ -73,6 +131,7 @@ function placeNewNumber() {
 
 function initializeGame() {
     // askForUserName() //ask for usrnme
+    loadUserName();
     board = [
         [0, 0, 0, 0],
         [0, 0, 0, 0],
@@ -279,9 +338,9 @@ function loadBestScore() {
     }
 }
 
-newGame.addEventListener('click', initializeGame);
+// newGame.addEventListener('click', initializeGame);
 
 
-initializeGame();
-loadBestScore()
+// initializeGame();
+// loadBestScore()
 
