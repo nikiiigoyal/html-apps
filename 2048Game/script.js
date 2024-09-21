@@ -1,42 +1,31 @@
 
-
 const supabaseUrl = "https://oiykcudwhjapzqoqvrgo.supabase.co";
 const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9peWtjdWR3aGphcHpxb3F2cmdvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjY3NDM4MDAsImV4cCI6MjA0MjMxOTgwMH0.ahoH5qqveWzY1vX9zrv0M2WC9iHsD08CBdXw3ixSXdg";
 
 const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
-console.log("Supabase client created:", supabase);
+let dbUsername
 async function askForUserName() {
     let userName = prompt("Please enter your name");
+    console.log("PROMPTED TEXT", userName)
+    dbUsername = await checkUserExists(userName);
+    console.log("DB USERNAME", dbUsername)
+    console.log("isUserAlreadyExist", !!dbUsername)
 
-    if (!userName) {
-        userName = prompt("Please enter a valid username");
+    if (!!dbUsername) {
+        displayUserName(dbUsername);
+    } else {
+        let newUserName = prompt("You are a new user! Please put your name here")
+        displayUserName(newUserName);
+        await saveUsernameToTable(newUserName)
     }
 
-    // Save username to Supabase
-    try {
-        const { data, error } = await supabase
-            .from('users')
-            .insert([{ username: userName }]);
-
-        if (error) {
-            console.error('Error inserting username:', error);
-        } else {
-            console.log('Username stored in Supabase:', data);
-        }
-    } catch (err) {
-        console.error('Supabase error:', err);
-    }
-
-    console.log("Username:", userName);
-    displayUserName();
 }
 askForUserName()
 async function loadUserName() {
     try {
-        const { data, error } = await supabase
+        const { data, error } = await supabaseClient
             .from('users')
             .select('username')
-            .limit(1);  // Assuming you want to retrieve the first username
 
         if (error) {
             console.error('Error fetching username:', error);
@@ -52,11 +41,12 @@ async function loadUserName() {
     }
 }
 
-function displayUserName() {
+function displayUserName(userName) {
     const userNameDisplay = document.createElement("div");
     userNameDisplay.classList.add("username-display");
     userNameDisplay.textContent = `Hello ${userName.toUpperCase()}! Join the numbers and get to the 2048 tile!`;
     document.body.prepend(userNameDisplay);
+    initializeGame()
 }
 
 // DOM elements
@@ -76,33 +66,14 @@ let board = [
     [0, 0, 0, 0],
     [0, 0, 0, 0]
 ]
-//function to ask for username
-// function askForUserName() {
-//     userName = prompt("Please enter your Name")
 
-//     //if username is invalid ask again
-//     if (!userName) {
-//         userName = prompt("Please enter valid user Name")
-//     }
-//     console.log("username",userName)
-//     displayUserName();
-// }
-
-// //fnction to display user name
-// function displayUserName() {
-//     const userNameDisplay = document.createElement("div")
-//     userNameDisplay.classList.add("username-display")
-//     userNameDisplay.textContent = `Hello ${userName.toUpperCase()}! Join the numbers and get to the 2048 tile!`
-//     document.body.prepend(userNameDisplay)
-// }
-//to generate random numbers either 2 or 4
 initializeGame();
 function generateRandomNumber() {
-    const numbers = [2,2,2,2,2,2,4,4,4,4]
+    const numbers = [2, 2, 2, 2, 2, 2, 4, 4, 4, 4]
     const randomIndex = Math.floor(Math.random() * numbers.length)
-    console.log("number:", numbers)
-    console.log("index", randomIndex)
-    console.log(numbers[randomIndex])
+    // console.log("number:", numbers)
+    // console.log("index", randomIndex)
+    // console.log(numbers[randomIndex])
     return numbers[randomIndex]
 }
 //to find empty cells
@@ -111,7 +82,7 @@ function findEmptyCells() {
     for (let i = 0; i < 4; i++) {
         for (let j = 0; j < 4; j++) {
             if (board[i][j] === 0) {
-                emptyCells.push({row: i, col: j})
+                emptyCells.push({ row: i, col: j })
                 // console.log("emptycells:",emptyCells)
             }
         }
@@ -131,7 +102,7 @@ function placeNewNumber() {
 
 function initializeGame() {
     // askForUserName() //ask for usrnme
-    loadUserName();
+    // loadUserName();
     board = [
         [0, 0, 0, 0],
         [0, 0, 0, 0],
@@ -152,19 +123,21 @@ function updateUI() {
             const cellValue = board[i][j];
             const cellIndex = i * 4 + j;
             const cellElement = grid[cellIndex];
-            
+            // console.log(cellElement, i, j, grid)
+
+
             cellElement.textContent = cellValue !== 0 ? cellValue : '';
             cellElement.className = 'grid-cell';
             if (cellValue !== 0) {
                 cellElement.classList.add(`cell-${cellValue}`);
-                console.log("cellvalue",cellValue)
-                console.log("cellindex",cellIndex)
-                console.log("cellelement",cellElement)
+                // console.log("cellvalue", cellValue)
+                // console.log("cellindex", cellIndex)
+                // console.log("cellelement", cellElement)
             }
         }
     }
     scoreContainer.textContent = score;
-    bestContainer.textContent= bestScore
+    bestContainer.textContent = bestScore
 }
 
 function simpleMoveLeft(board) {
@@ -234,33 +207,33 @@ function simpleMoveDown(board) {
 }
 function isGameOver() {
     console.log("Checking for empty cells...");
-    
+
     // Check if there are any empty cells
     if (findEmptyCells().length > 0) {
         console.log("Found empty cells, game is not over.");
         return false;
     }
-    
+
     // Check if any adjacent cells have the same value
     console.log("Checking for adjacent cells with the same value...");
     for (let i = 0; i < 4; i++) {
         for (let j = 0; j < 4; j++) {
             let currentValue = board[i][j];
-            
+
             // Check right neighbor
             if (j < 3 && board[i][j + 1] === currentValue) {
-                console.log(`Found matching adjacent tiles at (${i}, ${j}) and (${i}, ${j+1}), game is not over.`);
+                console.log(`Found matching adjacent tiles at (${i}, ${j}) and (${i}, ${j + 1}), game is not over.`);
                 return false;
             }
-            
+
             // Check bottom neighbor
             if (i < 3 && board[i + 1][j] === currentValue) {
-                console.log(`Found matching adjacent tiles at (${i}, ${j}) and (${i+1}, ${j}), game is not over.`);
+                console.log(`Found matching adjacent tiles at (${i}, ${j}) and (${i + 1}, ${j}), game is not over.`);
                 return false;
             }
         }
     }
-    
+
     console.log("No more moves possible, game is over.");
     return true;
 }
@@ -277,7 +250,7 @@ function showGameOverMessage() {
 
     // Disable further keypresses when the game is over
     window.removeEventListener('keydown', handleKeyPress);
-    
+
     document.getElementById('playAgainBtn').addEventListener('click', () => {
         document.body.removeChild(gameOverDiv);
         window.addEventListener('keydown', handleKeyPress);
@@ -288,7 +261,7 @@ function showGameOverMessage() {
 
 function handleKeyPress(event) {
     let result;
-    switch(event.key) {
+    switch (event.key) {
         case 'ArrowLeft':
             result = simpleMoveLeft(board);
             break;
@@ -306,19 +279,21 @@ function handleKeyPress(event) {
             return; // Exit the function for other keys
     }
 
-    if (result && result.moved) {
+    if (result) {
         board = result.board;
         score += result.score;
-        
+
         if (score > bestScore) {
             bestScore = score;
             saveBestScore()
         }
-        console.log("Checking if game is over..."); 
+        console.log("Checking if game is over...");
         if (isGameOver()) {
-            console.log("Game is over!"); 
+            console.log("Game is over!");
             updateUI(); // Update UI one last time
             showGameOverMessage();
+            saveScore(score, dbUsername)
+
             return; // Exit the function to prevent placing a new number
         }
 
@@ -344,3 +319,61 @@ function loadBestScore() {
 // initializeGame();
 // loadBestScore()
 
+
+
+
+async function checkUserExists(username) {
+    try {
+        const { data, error } = await supabaseClient
+            .from('users')
+            .select('username')
+            .eq('username', username)
+            .single();
+
+        if (error && error.code !== 'PGRST116') {
+            console.error('Error checking user:', error);
+            return false;
+        }
+
+
+        return data.username;
+    } catch (err) {
+        console.error('Supabase error:', err);
+        return false;
+    }
+}
+
+async function saveUsernameToTable(username) {
+    try {
+        const { data, error } = await supabaseClient
+            .from('users')
+            .insert([{ username: username }]);
+
+        console.log("username", userName)
+
+        if (error) {
+            console.error('Error inserting username:', error);
+        } else {
+            console.log('Username stored in Supabase:', data);
+        }
+    } catch (err) {
+        console.error('Supabase error:', err);
+    }
+}
+
+
+async function saveScore(score, userName) {
+    try {
+        const { data, error } = await supabaseClient
+            .from('game_scores')
+            .insert([
+                { username: userName, score: score }
+            ]);
+
+        if (error) throw error;
+
+        console.log('Score saved successfully:', data);
+    } catch (error) {
+        console.error('Error saving score:', error);
+    }
+}
