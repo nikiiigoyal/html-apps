@@ -6,97 +6,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>2048</title>
-
 </head>
 
 <body>
-    <div class="clear"></div>
-    <div class="gameouter">
+    <div id="dashboardContainer" class="dashboard-container hidden">
+        <h2>Welcome, <span id="userDisplay"></span>!</h2>
+        <p>Current Score: <span id="currentScore">0</span></p>
+        <div id="previousScores"></div>
+        <button id="startGame">Start Game</button>
+    </div>
 
-        <div class="container">
-            <h1>2048 Game</h1>
-            <div class="heading">
-                <div class="newgame-score-block">
-
-                    <div class="score-block">
-                        <div class="score-container">0</div>
-                        <div class="best-container">0</div>
+    <div id="gameContainer" class="hidden">
+        <div class="clear"></div>
+        <div class="gameouter">
+            <div class="container">
+                <h1>2048 Game</h1>
+                <div class="heading">
+                    <div class="newgame-score-block">
+                        <div class="score-block">
+                            <div class="score-container">0</div>
+                            <div class="best-container">0</div>
+                        </div>
+                        <div class="restart-game-btn-block">
+                            <button class="restart-button" id="restartBtn">New Game</button>
+                        </div>
                     </div>
-                    <div class="restart-game-btn-block">
-                        <button class="restart-button" id="restartBtn">New Game</button>
+                </div>
+
+                <div class="heading">
+                    <div>
+                        <p></p>
+                    </div>
+                    <div class="">
+                        <div class="above-game"></div>
+                        <div></div>
+                    </div>
+                </div>
+
+                <div class="clear"></div>
+
+                <div class="game-container">
+                    <div class="game-message">
+                        <p></p>
+                        <div class="lower">
+                            <a class="keep-playing-button">Keep going</a>
+                            <a class="retry-button">Try again</a>
+                        </div>
                     </div>
 
+                    <div class="grid-container">
+                        <div class="grid-row">
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell"></div>
+                        </div>
+                        <div class="grid-row">
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell"></div>
+                        </div>
+                        <div class="grid-row">
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell"></div>
+                        </div>
+                        <div class="grid-row">
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell"></div>
+                        </div>
+                    </div>
+
+                    <div class="tile-container">
+                    </div>
                 </div>
             </div>
-
-
-            <div class="heading">
-                <div>
-                    <p></p>
-                </div>
-
-
-                <div class="">
-                    <div class="above-game"></div>
-                    <div></div>
-                </div>
-            </div>
-
-            <div class="clear"></div>
-
-            <div class="game-container">
-                <div class="game-message">
-                    <p></p>
-                    <div class="lower">
-                        <a class="keep-playing-button">Keep going</a>
-                        <a class="retry-button">Try again</a>
-                    </div>
-                </div>
-
-                <div class="grid-container">
-                    <div class="grid-row">
-                        <div class="grid-cell"></div>
-                        <div class="grid-cell"></div>
-                        <div class="grid-cell"></div>
-                        <div class="grid-cell"></div>
-                    </div>
-                    <div class="grid-row">
-                        <div class="grid-cell"></div>
-                        <div class="grid-cell"></div>
-                        <div class="grid-cell"></div>
-                        <div class="grid-cell"></div>
-                    </div>
-                    <div class="grid-row">
-                        <div class="grid-cell"></div>
-                        <div class="grid-cell"></div>
-                        <div class="grid-cell"></div>
-                        <div class="grid-cell"></div>
-                    </div>
-                    <div class="grid-row">
-                        <div class="grid-cell"></div>
-                        <div class="grid-cell"></div>
-                        <div class="grid-cell"></div>
-                        <div class="grid-cell"></div>
-                    </div>
-                </div>
-
-                <div class="tile-container">
-
-                </div>
-            </div>
-
-            <!-- <p class="game-explanation">
-                  <strong class="important">HOW TO PLAY: Use your arrow keys or swipe left or right, up or down to move the tiles. When two tiles with the same number touch, they merge into one.<span class=""> Once you get 2048 in any square, you win.</span>
-        </strong>
-        </p> -->
-
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
     <script src="script.js"></script>
-    
-
 </body>
 
 </html>

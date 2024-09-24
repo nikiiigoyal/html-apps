@@ -55,8 +55,22 @@ let bestContainer = document.querySelector(".best-container")
 let newGame = document.querySelector("#restartBtn")
 let gridContainer = document.querySelector(".grid-container")
 let grid = document.querySelectorAll(".grid-cell")
+const authContainer = document.getElementById('authContainer');
+const authTitle = document.getElementById('authTitle');
+const authForm = document.getElementById('authForm');
+const authSubmit = document.getElementById('authSubmit');
+const toggleAuth = document.getElementById('toggleAuth');
+const guestPlay = document.getElementById('guestPlay');
+const dashboardContainer = document.getElementById('dashboardContainer');
+const userDisplay = document.getElementById('userDisplay');
+const currentScoreDisplay = document.getElementById('currentScore');
+const previousScoresDisplay = document.getElementById('previousScores');
+const startGame = document.getElementById('startGame');
+const gameContainer = document.getElementById('gameContainer');
 
 window.addEventListener("keydown", handleKeyPress);
+let isLogin = true;
+let currentUser = null;
 let userName = ""
 let bestScore = 0
 let score = 0
@@ -66,7 +80,73 @@ let board = [
     [0, 0, 0, 0],
     [0, 0, 0, 0]
 ]
+// 
+// function toggleAuthMode() {
+//     isLogin = !isLogin;
+//     authTitle.textContent = isLogin ? 'Login' : 'Sign Up';
+//     authSubmit.textContent = isLogin ? 'Login' : 'Sign Up';
+//     toggleAuth.textContent = isLogin ? 'Need an account? Sign Up' : 'Have an account? Login';
+// }
 
+// async function handleAuth(e) {
+//     e.preventDefault();
+//     const username = document.getElementById('username').value;
+//     const password = document.getElementById('password').value;
+
+//     try {
+//         let result;
+//         if (isLogin) {
+//             result = await supabase.auth.signInWithPassword({ email: username, password });
+//         } else {
+//             result = await supabase.auth.signUp({ email: username, password });
+//         }
+
+//         if (result.error) throw result.error;
+
+//         currentUser = result.data.user;
+//         showDashboard();
+//     } catch (error) {
+//         console.error('Auth error:', error.message);
+//         alert(error.message);
+//     }
+// }
+
+// function handleGuestPlay() {
+//     currentUser = { username: 'Guest' };
+//     showDashboard();
+// }
+
+async function showDashboard() {
+    authContainer.classList.add('hidden');
+    dashboardContainer.classList.remove('hidden');
+    userDisplay.textContent = currentUser.username;
+    
+    if (currentUser.id) {
+        await fetchPreviousScores();
+    }
+}
+
+async function fetchPreviousScores() {
+    try {
+        const { data, error } = await supabase
+            .from('game_scores')
+            .select('score')
+            .eq('user_id', currentUser.id)
+            .order('created_at', { ascending: false })
+            .limit(5);
+
+        if (error) throw error;
+
+        previousScoresDisplay.innerHTML = '<h3>Previous Scores:</h3>';
+        data.forEach(item => {
+            const scoreElement = document.createElement('p');
+            scoreElement.textContent = item.score;
+            previousScoresDisplay.appendChild(scoreElement);
+        });
+    } catch (error) {
+        console.error('Error fetching previous scores:', error.message);
+    }
+}
 initializeGame();
 function generateRandomNumber() {
     const numbers = [2, 2, 2, 2, 2, 2, 4, 4, 4, 4]
@@ -103,6 +183,8 @@ function placeNewNumber() {
 function initializeGame() {
     // askForUserName() //ask for usrnme
     // loadUserName();
+    dashboardContainer.classList.add('hidden');
+    gameContainer.classList.remove('hidden');
     board = [
         [0, 0, 0, 0],
         [0, 0, 0, 0],
@@ -243,7 +325,12 @@ function showGameOverMessage() {
     gameOverDiv.innerHTML = `
         <h2>Game Over!</h2>
         <p>Your score: ${score}</p>
-        <button id="playAgainBtn">Play Again</button>
+        <div class="game-over-actions">
+            <button id="playAgainBtn">Play Again</button>
+            <a id="shareOnTwitter" href="#" target="_blank" class="twitter-share-button">
+                Share
+            </a>
+        </div>
     `;
 
     document.body.appendChild(gameOverDiv);
@@ -255,8 +342,15 @@ function showGameOverMessage() {
         document.body.removeChild(gameOverDiv);
         window.addEventListener('keydown', handleKeyPress);
         initializeGame(); // Restart the game
+        saveScore(score, userName);
+        showDashboard();
     });
+    //set up twitter share link
+    const twitterShareLink = document.getElementById('shareOnTwitter');
+    twitterShareLink.href = `https://twitter.com/intent/tweet?text=I scored ${score} points on the 2048 game!&hashtags=2048game`;
 }
+
+
 
 
 function handleKeyPress(event) {
@@ -313,15 +407,11 @@ function loadBestScore() {
     }
 }
 
-// newGame.addEventListener('click', initializeGame);
+
 
 
 // initializeGame();
 // loadBestScore()
-
-
-
-
 async function checkUserExists(username) {
     try {
         const { data, error } = await supabaseClient
@@ -363,17 +453,21 @@ async function saveUsernameToTable(username) {
 
 
 async function saveScore(score, userName) {
-    try {
-        const { data, error } = await supabaseClient
-            .from('game_scores')
-            .insert([
-                { username: userName, score: score }
-            ]);
+    if (currentUser && currentUser.id) {
+        try {
+            const { data, error } = await supabaseClient
+                .from('game_scores')
+                .insert([
+                    { user_id: currentUser.id, username: userName, score: score }
+                ]);
 
-        if (error) throw error;
+            if (error) throw error;
 
-        console.log('Score saved successfully:', data);
-    } catch (error) {
-        console.error('Error saving score:', error);
+            console.log('Score saved successfully:', data);
+        } catch (error) {
+            console.error('Error saving score:', error);
+        }
     }
 }
+
+// Initialize the auth form

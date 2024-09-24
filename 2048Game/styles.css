@@ -528,6 +528,32 @@ hr {
     -webkit-background-clip: text;
     color: transparent;
     /* padding: 0; */
-    
+    }
 
-       }
+       .auth-container, .dashboard-container {
+        width: 300px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .auth-form input, .auth-form button {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 5px;
+    }
+    .dashboard-container h2 {
+        margin-top: 0;
+    }
+    .hidden {
+        display: none;
+    }
+    #shareOnTwitter{
+        font-size: 25px;
+    /* border: 1px solid black; */
+    padding: 2px 34px 9px 34px;
+    background: white;
+    text-align: center;
+    text-decoration: none;
+    }
