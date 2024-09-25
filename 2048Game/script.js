@@ -471,3 +471,5 @@ async function saveScore(score, userName) {
 }
 
 // Initialize the auth form
+
+newGame.addEventListener("click",initializeGame)
