@@ -8,3 +8,22 @@ themeIcon.onclick = function () {
     themeIcon.src = "mainimages/lightmode.jpg";
   }
 };
+// hamburgen menu functionality
+
+document.addEventListener('DOMContentLoaded', function() {
+  const hamburgerMenu = document.getElementById('hamburger-menu');
+  const navList = document.getElementById('nav-list');
+
+  hamburgerMenu.addEventListener('click', function() {
+    this.classList.toggle('active');
+    navList.classList.toggle('show');
+  });
+
+  // Close menu when a link is clicked
+  document.querySelectorAll('.nav__link').forEach(link => {
+    link.addEventListener('click', function() {
+      hamburgerMenu.classList.remove('active');
+      navList.classList.remove('show');
+    });
+  });
+});
