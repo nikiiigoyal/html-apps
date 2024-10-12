@@ -15,7 +15,7 @@
 
   --clr-light: #fff;
   --clr-dark: #303030;
-  --clr-accent: #16e0bd;
+  --clr-accent: #292416;
   
   
 
@@ -30,6 +30,7 @@
 .dark-theme{
           --clr-light:#212121;
           --clr-dark:#fff;
+          --clr-accent: #254e47;
 
        }
 /* --primary-color:#edf2fc;
@@ -110,44 +111,7 @@ html{
   }
   
   
-  /* .header-tag:hover{
-    border-bottom: 1px solid black;
-  } */
-  /* .introduction{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 30px;
-  }
-  .introduction-body{
-    display: flex;
-    
-    width: 800px;
-    padding: 0 19px;
-    align-items: center;
-  }
-  .about-me-title{
-    color: #403f57;
-    font-size: 31px;
-  }
-  .text{
-    color: #df4778;
-  }
-  .about{
-    color:#a8a7b8;
-  }
-  .about-me-nav-left span{
-    color: #d92761;
-  }
-  .button-dwnld{
-    background: #ef8ba8;
-    /* margin: 5px; */
-    /* padding: 11px;
-    border: none;
-    border-radius: 3px;
-    text-align: center;
-    color: blanchedalmond;
-} */
+  
 
 .about-me-nav-left{
   display: flex;
@@ -196,30 +160,9 @@ html{
   
   
   
-  /* buttons */
   
   
-    /* display: inline-block;
-    padding: 0.5em 2.5em;
-    /* background-color: var(--clr-dark); */
-    /* text-decoration: none;
-    cursor: pointer;
-    font-size: .8rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: var(--fw-bold);
-    transition: transform 200ms ease-in-out;
-    background-color: var(--clr-accent);
-    color: var(--clr-dark);
-  } */ */
-  
-  /* .btn:hover{
-    transform: scale(1.1);
-  } */
-  
-  /* Typography */
-  
- 
+ /* typography */
   h1{font-size: var(--fs-h1)}
   h2{font-size: var(--fs-h2)}
   h3{font-size: var(--fs-h3)}

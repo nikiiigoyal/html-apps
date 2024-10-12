@@ -244,6 +244,8 @@
     align-items: flex-end;
   }
 
+
+
   /* responsive */
   @media screen and (max-width: 767px) {
     .header-tag {
@@ -373,3 +375,147 @@
       display: none;
     }
   }
+
+
+  /* top projects section */
+  /* New styles for mobile devices */
+@media screen and (max-width: 768px) {
+  .project-container {
+    flex-direction: column;
+  }
+
+  .project-item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .project-img img {
+    width: 100%;
+    height: auto;
+  }
+
+  .project-info {
+    padding: 10px;
+  }
+
+  .project-info h3 {
+    font-size: 1.2em;
+  }
+
+  .project-info p {
+    font-size: 0.9em;
+  }
+
+  .project-info button {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+/* New styles for mobile devices */
+@media screen and (max-width: 768px) {
+  .header-tag {
+    flex-wrap: wrap;
+  }
+
+  .about-me-nav-left {
+    flex-basis: 100%;
+    margin-bottom: 10px;
+  }
+
+  .about-me-nav-right {
+    flex-basis: 100%;
+    justify-content: space-between;
+  }
+
+  .nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav__list {
+    display: none; /* Hide the nav list on mobile */
+  }
+
+  .hamburger-menu {
+    display: block; /* Ensure hamburger is visible */
+  }
+
+  .theme-icon {
+    margin-left: auto; /* Push the theme icon to the right */
+  }
+}
+
+/* Optional: If you want to show the nav list when the hamburger is clicked */
+@media screen and (max-width: 768px) {
+  .nav__list.show {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff; /* Adjust color as needed */
+    padding: 10px;
+  }
+
+  .nav__list.show li {
+    margin: 10px 0;
+  }
+}
+/* Add these new styles for the projects section in dark mode */
+.dark-theme .projects {
+  background-color: var(--clr-light);
+  color: var(--clr-dark);
+}
+
+.dark-theme .projects-header {
+  color: var(--clr-dark);
+}
+
+.dark-theme .project-item {
+  background-color: #2a2a2a; /* Slightly lighter than the background for contrast */
+  box-shadow: 2px 3px 5px rgba(255, 255, 255, 0.1);
+}
+
+.dark-theme .project-item .project-info {
+  color: var(--clr-dark);
+}
+
+.dark-theme .project-item .project-info button {
+  background-color: var(--clr-accent);
+  color: var(--clr-light);
+}
+
+.dark-theme .project-item .project-info button:hover {
+  background-color: #14c4a6; /* Darker shade of accent color for hover state */
+}
+
+/* Adjust the key projects section for dark mode */
+.dark-theme .key-projects-body {
+  background-color: #2a2a2a;
+  color: var(--clr-dark);
+}
+
+.dark-theme .key-projects-body strong {
+  color: var(--clr-accent);
+}
+
+/* Ensure that the hamburger menu is visible in dark mode */
+.dark-theme .hamburger-menu .bar {
+  background-color: var(--clr-dark);
+}
+
+/* Adjust the navigation menu for dark mode */
+.dark-theme .nav__list {
+  background-color: var(--clr-light);
+}
+
+.dark-theme .nav__link {
+  color: var(--clr-dark);
+}
+
+.dark-theme .nav__link:hover {
+  background-color: #3a3a3a;
+}
