@@ -1,3 +1,5 @@
+// its like this: When you grab a plant, the code remembers where you first grabbed it (pos3, pos4). As you move your pointer, it calculates how far you've moved from that original spot and moves the plant accordingly.
+
 // sets up a plant element to be draggable
 function dragElement(terrariumElement) {
   //set 4 positions for positioning on the screen
@@ -10,8 +12,8 @@ function dragElement(terrariumElement) {
   function pointerDrag(e) {
     e.preventDefault();
     console.log(e);
-    pos3 = e.clientX;
-    pos4 = e.clientY;
+    pos3 = e.clientX; // Save the starting X position
+    pos4 = e.clientY; // Save the starting Y position
 
     document.onpointermove = elementDrag;
     document.onpointerup = stopElementDrag;
@@ -19,12 +21,16 @@ function dragElement(terrariumElement) {
 
   // Handles the movement while dragging
   function elementDrag(e) {
+    // Calculate how far you've moved horizontally and verticlly since last position
     pos1 = pos3 - e.clientX;
     pos2 = pos4 - e.clientY;
+    // Update the stored positions for next time
     pos3 = e.clientX;
     pos4 = e.clientY;
     console.log(pos1, pos2, pos3, pos4);
+    // Move the plant vertically by the calculated amount
     terrariumElement.style.top = terrariumElement.offsetTop - pos2 + "px";
+    // Move the plant horizontally by the calculated amount
     terrariumElement.style.left = terrariumElement.offsetLeft - pos1 + "px";
   }
 
