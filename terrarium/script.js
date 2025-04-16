@@ -1,4 +1,31 @@
 // its like this: When you grab a plant, the code remembers where you first grabbed it (pos3, pos4). As you move your pointer, it calculates how far you've moved from that original spot and moves the plant accordingly.
+window.addEventListener("load", addwelcomePopup);
+
+function addwelcomePopup() {
+  const overlay = document.createElement("div");
+  overlay.classList.add("overlay-popup");
+
+  const popup = document.createElement("div");
+  popup.classList.add("popup");
+
+  popup.innerHTML = `
+    <h2 style="color: #4CAF50; margin-top: 0;">Welcome to Your Terrarium!</h2>
+    <p>Design your own terrarium by dragging and positioning the plants anywhere you like.</p>
+    <p>Simply click and hold on any plant to move it around.</p>
+    <p>Show your creativity and create a beautiful arrangement!</p>
+    <button id='start-btn'>Start Designing</button> 
+    `;
+
+  // Add popup to overlay
+  overlay.appendChild(popup);
+
+  // Add overlay to document
+  document.body.appendChild(overlay);
+  // Add event listener to button
+  document.getElementById("start-btn").addEventListener("click", function () {
+    overlay.remove();
+  });
+}
 
 // sets up a plant element to be draggable
 function dragElement(terrariumElement) {
