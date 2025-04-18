@@ -67,7 +67,7 @@ document.getElementById("start").addEventListener("click", () => {
   const spanWords = words.map(function (word) {
     return `<span>${word}</span>`;
   });
-  quoteElement.innerHTML = spanWords.join(" "); // Added space between words
+  quoteElement.innerHTML = spanWords.join(" ");
   quoteElement.childNodes[0].className = "highlight";
   messageElement.innerText = "";
 
